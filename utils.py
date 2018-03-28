@@ -42,9 +42,12 @@ def get_cifar10_batches():
     result = {}
     for d in dicts:
         result.update(d)
-    return result
+    return pd.DataFrame([v for k, v in result.items()])
 
 def cifar_10_dict_to_batch(unpickled_cifar10_batch, batch_num):
     labels = unpickled_cifar10_batch[b"labels"]
     data = unpickled_cifar10_batch[b"data"]
     return {idx + batch_num: (label, data) for idx, (label, data) in enumerate(zip(labels, data))}
+
+def get_cifar10_test_batch():
+    return pd.DataFrame([v for k, v in cifar_10_dict_to_batch(unpickle("data/cifar-10-batches-py/test_batch"), 0).items()])
