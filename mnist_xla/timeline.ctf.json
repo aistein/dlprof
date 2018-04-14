@@ -1,0 +1,1056 @@
+{
+    "traceEvents": [
+        {
+            "name": "process_name",
+            "pid": 0,
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            }
+        },
+        {
+            "name": "process_name",
+            "pid": 1,
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "pid": 2,
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "pid": 3,
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "pid": 4,
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Tensors"
+            }
+        },
+        {
+            "pid": 1,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "dur": 20,
+            "ts": 1523738360708716
+        },
+        {
+            "pid": 1,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_Placeholder_0_0",
+                "op": "_Arg"
+            },
+            "dur": 9,
+            "ts": 1523738360708738
+        },
+        {
+            "pid": 1,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_Placeholder_1_0_1",
+                "op": "_Arg"
+            },
+            "dur": 5,
+            "ts": 1523738360708959
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "dur": 35,
+            "ts": 1523738360708534
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "ConstantFolding/gradients/sparse_softmax_cross_entropy_loss/div_grad/BroadcastGradientArgs-0",
+                "op": "Const"
+            },
+            "dur": 15,
+            "ts": 1523738360708580
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "GradientDescent/learning_rate",
+                "op": "Const"
+            },
+            "dur": 13,
+            "ts": 1523738360708597
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Greater/y",
+                "op": "Const"
+            },
+            "dur": 6,
+            "ts": 1523738360708611
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "gradients/Fill",
+                "op": "Const"
+            },
+            "dur": 5,
+            "ts": 1523738360708618
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/ExpandDims/dim",
+                "op": "Const"
+            },
+            "dur": 4,
+            "ts": 1523738360708624
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Const_1",
+                "op": "Const"
+            },
+            "dur": 3,
+            "ts": 1523738360708629
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "VariableV2",
+            "args": {
+                "name": "Variable_1",
+                "op": "VariableV2"
+            },
+            "dur": 15,
+            "ts": 1523738360708633
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "gradients/add_grad/Shape_1",
+                "op": "Const"
+            },
+            "dur": 3,
+            "ts": 1523738360708649
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like/Const",
+                "op": "Const"
+            },
+            "dur": 4,
+            "ts": 1523738360708653
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Const",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Reshape/shape",
+                "op": "Const"
+            },
+            "dur": 5,
+            "ts": 1523738360708658
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "VariableV2",
+            "args": {
+                "name": "Variable",
+                "op": "VariableV2"
+            },
+            "dur": 3,
+            "ts": 1523738360708664
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "Variable_1/read",
+                "op": "Identity",
+                "input0": "Variable_1"
+            },
+            "dur": 3,
+            "ts": 1523738360708669
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "Variable/read",
+                "op": "Identity",
+                "input0": "Variable"
+            },
+            "dur": 2,
+            "ts": 1523738360708678
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "MatMul",
+            "args": {
+                "name": "MatMul",
+                "input1": "Variable/read",
+                "op": "MatMul",
+                "input0": "_arg_Placeholder_0_0/_1"
+            },
+            "dur": 104,
+            "ts": 1523738360709148
+        },
+        {
+            "pid": 1,
+            "cat": "DataFlow",
+            "ph": "s",
+            "tid": 0,
+            "name": "_arg_Placeholder_0_0",
+            "ts": 1523738360708747,
+            "id": 0
+        },
+        {
+            "pid": 3,
+            "cat": "DataFlow",
+            "ph": "t",
+            "tid": 0,
+            "name": "_arg_Placeholder_0_0",
+            "ts": 1523738360709148,
+            "id": 0
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Add",
+            "args": {
+                "name": "add",
+                "input1": "Variable_1/read",
+                "op": "Add",
+                "input0": "MatMul"
+            },
+            "dur": 53,
+            "ts": 1523738360709256
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Shape",
+            "args": {
+                "name": "gradients/add_grad/Shape",
+                "op": "Shape",
+                "input0": "MatMul"
+            },
+            "dur": 13,
+            "ts": 1523738360709312
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "SparseSoftmaxCrossEntropyWithLogits",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/xentropy/xentropy",
+                "input1": "_arg_Placeholder_1_0_1/_3",
+                "op": "SparseSoftmaxCrossEntropyWithLogits",
+                "input0": "add"
+            },
+            "dur": 84,
+            "ts": 1523738360709327
+        },
+        {
+            "pid": 1,
+            "cat": "DataFlow",
+            "ph": "s",
+            "tid": 0,
+            "name": "_arg_Placeholder_1_0_1",
+            "ts": 1523738360708964,
+            "id": 1
+        },
+        {
+            "pid": 3,
+            "cat": "DataFlow",
+            "ph": "t",
+            "tid": 0,
+            "name": "_arg_Placeholder_1_0_1",
+            "ts": 1523738360709327,
+            "id": 1
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "BroadcastGradientArgs",
+            "args": {
+                "name": "gradients/add_grad/BroadcastGradientArgs",
+                "input1": "gradients/add_grad/Shape_1",
+                "op": "BroadcastGradientArgs",
+                "input0": "gradients/add_grad/Shape"
+            },
+            "dur": 13,
+            "ts": 1523738360709414
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Shape",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like/Shape",
+                "op": "Shape",
+                "input0": "sparse_softmax_cross_entropy_loss/xentropy/xentropy"
+            },
+            "dur": 4,
+            "ts": 1523738360709429
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Mul",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Mul",
+                "input1": "sparse_softmax_cross_entropy_loss/Const",
+                "op": "Mul",
+                "input0": "sparse_softmax_cross_entropy_loss/xentropy/xentropy"
+            },
+            "dur": 25,
+            "ts": 1523738360709438
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Fill",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like",
+                "input1": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like/Const",
+                "op": "Fill",
+                "input0": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like/Shape"
+            },
+            "dur": 24,
+            "ts": 1523738360709466
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "BroadcastGradientArgs",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/BroadcastGradientArgs",
+                "input1": "ConstantFolding/gradients/sparse_softmax_cross_entropy_loss/div_grad/BroadcastGradientArgs-0",
+                "op": "BroadcastGradientArgs",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Shape"
+            },
+            "dur": 11,
+            "ts": 1523738360709493
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Sum",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Sum",
+                "input1": "sparse_softmax_cross_entropy_loss/Const_1",
+                "op": "Sum",
+                "input0": "sparse_softmax_cross_entropy_loss/Mul"
+            },
+            "dur": 31,
+            "ts": 1523738360709507
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Shape",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Shape",
+                "op": "Shape",
+                "input0": "sparse_softmax_cross_entropy_loss/Mul"
+            },
+            "dur": 8,
+            "ts": 1523738360709541
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Mul",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights",
+                "input1": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights/ones_like",
+                "op": "Mul",
+                "input0": "sparse_softmax_cross_entropy_loss/ones_like"
+            },
+            "dur": 21,
+            "ts": 1523738360709551
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Sum_1",
+                "op": "Identity",
+                "input0": "sparse_softmax_cross_entropy_loss/Sum"
+            },
+            "dur": 3,
+            "ts": 1523738360709575
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Sum",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/num_present",
+                "input1": "sparse_softmax_cross_entropy_loss/Const_1",
+                "op": "Sum",
+                "input0": "sparse_softmax_cross_entropy_loss/num_present/broadcast_weights"
+            },
+            "dur": 20,
+            "ts": 1523738360709582
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Neg",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Neg",
+                "op": "Neg",
+                "input0": "sparse_softmax_cross_entropy_loss/Sum_1"
+            },
+            "dur": 17,
+            "ts": 1523738360709605
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Greater",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Greater",
+                "input1": "sparse_softmax_cross_entropy_loss/Greater/y",
+                "op": "Greater",
+                "input0": "sparse_softmax_cross_entropy_loss/num_present"
+            },
+            "dur": 39,
+            "ts": 1523738360709624
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Equal",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Equal",
+                "input1": "sparse_softmax_cross_entropy_loss/Greater/y",
+                "op": "Equal",
+                "input0": "sparse_softmax_cross_entropy_loss/num_present"
+            },
+            "dur": 20,
+            "ts": 1523738360709667
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Select",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/value_grad/Select",
+                "input1": "gradients/Fill",
+                "input2": "gradients/sparse_softmax_cross_entropy_loss/value_grad/zeros_like",
+                "op": "Select",
+                "input0": "sparse_softmax_cross_entropy_loss/Greater"
+            },
+            "dur": 31,
+            "ts": 1523738360709690
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Select",
+            "args": {
+                "name": "sparse_softmax_cross_entropy_loss/Select",
+                "input1": "sparse_softmax_cross_entropy_loss/ones_like",
+                "input2": "sparse_softmax_cross_entropy_loss/num_present",
+                "op": "Select",
+                "input0": "sparse_softmax_cross_entropy_loss/Equal"
+            },
+            "dur": 20,
+            "ts": 1523738360709727
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/value_grad/tuple/control_dependency",
+                "input1": "^sparse_softmax_cross_entropy_loss/Greater",
+                "op": "Identity",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/value_grad/Select"
+            },
+            "dur": 3,
+            "ts": 1523738360709751
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "RealDiv",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv_1",
+                "input1": "sparse_softmax_cross_entropy_loss/Select",
+                "op": "RealDiv",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Neg"
+            },
+            "dur": 21,
+            "ts": 1523738360709757
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "RealDiv",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv",
+                "input1": "sparse_softmax_cross_entropy_loss/Select",
+                "op": "RealDiv",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/value_grad/tuple/control_dependency"
+            },
+            "dur": 16,
+            "ts": 1523738360709780
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "RealDiv",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv_2",
+                "input1": "sparse_softmax_cross_entropy_loss/Select",
+                "op": "RealDiv",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv_1"
+            },
+            "dur": 15,
+            "ts": 1523738360709799
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Sum",
+                "op": "Identity",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv"
+            },
+            "dur": 3,
+            "ts": 1523738360709819
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Mul",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/mul",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/div_grad/RealDiv_2",
+                "op": "Mul",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/value_grad/tuple/control_dependency"
+            },
+            "dur": 16,
+            "ts": 1523738360709824
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Reshape",
+                "input1": "ConstantFolding/gradients/sparse_softmax_cross_entropy_loss/div_grad/BroadcastGradientArgs-0",
+                "op": "Reshape",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Sum"
+            },
+            "dur": 7,
+            "ts": 1523738360709842
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Sum_1",
+                "op": "Identity",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/mul"
+            },
+            "dur": 3,
+            "ts": 1523738360709851
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/div_grad/tuple/control_dependency",
+                "input1": "^gradients/sparse_softmax_cross_entropy_loss/div_grad/Sum_1",
+                "op": "Identity",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/Reshape"
+            },
+            "dur": 2,
+            "ts": 1523738360709856
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_1_grad/Reshape",
+                "input1": "ConstantFolding/gradients/sparse_softmax_cross_entropy_loss/div_grad/BroadcastGradientArgs-0",
+                "op": "Reshape",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/div_grad/tuple/control_dependency"
+            },
+            "dur": 5,
+            "ts": 1523738360709860
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Tile",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_1_grad/Tile",
+                "input1": "ConstantFolding/gradients/sparse_softmax_cross_entropy_loss/div_grad/BroadcastGradientArgs-0",
+                "op": "Tile",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Sum_1_grad/Reshape"
+            },
+            "dur": 3,
+            "ts": 1523738360709867
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Reshape",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Reshape/shape",
+                "op": "Reshape",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Sum_1_grad/Tile"
+            },
+            "dur": 3,
+            "ts": 1523738360709872
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Tile",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Tile",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Shape",
+                "op": "Tile",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Reshape"
+            },
+            "dur": 24,
+            "ts": 1523738360709878
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Mul",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/mul",
+                "input1": "sparse_softmax_cross_entropy_loss/Const",
+                "op": "Mul",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Tile"
+            },
+            "dur": 15,
+            "ts": 1523738360709905
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Sum",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Sum",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/BroadcastGradientArgs",
+                "op": "Sum",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/mul"
+            },
+            "dur": 6,
+            "ts": 1523738360709923
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Reshape",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Shape",
+                "op": "Reshape",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Sum"
+            },
+            "dur": 3,
+            "ts": 1523738360709932
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "input1": "^sparse_softmax_cross_entropy_loss/xentropy/xentropy",
+                "input3": "^gradients/sparse_softmax_cross_entropy_loss/Sum_grad/Tile",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/Reshape",
+                "name": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/tuple/control_dependency",
+                "op": "Identity",
+                "input2": "^gradients/sparse_softmax_cross_entropy_loss/Mul_grad/BroadcastGradientArgs"
+            },
+            "dur": 3,
+            "ts": 1523738360709937
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "ExpandDims",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/ExpandDims",
+                "input1": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/ExpandDims/dim",
+                "op": "ExpandDims",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/Mul_grad/tuple/control_dependency"
+            },
+            "dur": 6,
+            "ts": 1523738360709944
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Mul",
+            "args": {
+                "name": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/mul",
+                "input1": "sparse_softmax_cross_entropy_loss/xentropy/xentropy:1",
+                "op": "Mul",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/ExpandDims"
+            },
+            "dur": 22,
+            "ts": 1523738360709952
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Sum",
+            "args": {
+                "name": "gradients/add_grad/Sum",
+                "input1": "gradients/add_grad/BroadcastGradientArgs",
+                "op": "Sum",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/mul"
+            },
+            "dur": 6,
+            "ts": 1523738360709977
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Sum",
+            "args": {
+                "name": "gradients/add_grad/Sum_1",
+                "input1": "gradients/add_grad/BroadcastGradientArgs:1",
+                "op": "Sum",
+                "input0": "gradients/sparse_softmax_cross_entropy_loss/xentropy/xentropy_grad/mul"
+            },
+            "dur": 38,
+            "ts": 1523738360709986
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/add_grad/Reshape",
+                "input1": "gradients/add_grad/Shape",
+                "op": "Reshape",
+                "input0": "gradients/add_grad/Sum"
+            },
+            "dur": 4,
+            "ts": 1523738360710026
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Reshape",
+            "args": {
+                "name": "gradients/add_grad/Reshape_1",
+                "input1": "gradients/add_grad/Shape_1",
+                "op": "Reshape",
+                "input0": "gradients/add_grad/Sum_1"
+            },
+            "dur": 3,
+            "ts": 1523738360710036
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/add_grad/tuple/control_dependency",
+                "input1": "^gradients/add_grad/Reshape_1",
+                "op": "Identity",
+                "input0": "gradients/add_grad/Reshape"
+            },
+            "dur": 2,
+            "ts": 1523738360710041
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/add_grad/tuple/control_dependency_1",
+                "input1": "^gradients/add_grad/Reshape",
+                "op": "Identity",
+                "input0": "gradients/add_grad/Reshape_1"
+            },
+            "dur": 4,
+            "ts": 1523738360710045
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "MatMul",
+            "args": {
+                "name": "gradients/MatMul_grad/MatMul_1",
+                "input1": "gradients/add_grad/tuple/control_dependency",
+                "op": "MatMul",
+                "input0": "_arg_Placeholder_0_0/_1"
+            },
+            "dur": 30,
+            "ts": 1523738360710051
+        },
+        {
+            "pid": 1,
+            "cat": "DataFlow",
+            "ph": "s",
+            "tid": 0,
+            "name": "_arg_Placeholder_0_0",
+            "ts": 1523738360708747,
+            "id": 2
+        },
+        {
+            "pid": 3,
+            "cat": "DataFlow",
+            "ph": "t",
+            "tid": 0,
+            "name": "_arg_Placeholder_0_0",
+            "ts": 1523738360710051,
+            "id": 2
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "ApplyGradientDescent",
+            "args": {
+                "name": "GradientDescent/update_Variable_1/ApplyGradientDescent",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/add_grad/tuple/control_dependency_1",
+                "op": "ApplyGradientDescent",
+                "input0": "Variable_1"
+            },
+            "dur": 57,
+            "ts": 1523738360710084
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "Identity",
+            "args": {
+                "name": "gradients/MatMul_grad/tuple/control_dependency_1",
+                "input1": "^Variable/read",
+                "input2": "^gradients/add_grad/tuple/control_dependency",
+                "op": "Identity",
+                "input0": "gradients/MatMul_grad/MatMul_1"
+            },
+            "dur": 22,
+            "ts": 1523738360710145
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "ApplyGradientDescent",
+            "args": {
+                "name": "GradientDescent/update_Variable/ApplyGradientDescent",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/MatMul_grad/tuple/control_dependency_1",
+                "op": "ApplyGradientDescent",
+                "input0": "Variable"
+            },
+            "dur": 22,
+            "ts": 1523738360710170
+        },
+        {
+            "pid": 3,
+            "cat": "Op",
+            "ph": "X",
+            "tid": 0,
+            "name": "NoOp",
+            "args": {
+                "name": "GradientDescent",
+                "input1": "^GradientDescent/update_Variable_1/ApplyGradientDescent",
+                "op": "NoOp",
+                "input0": "^GradientDescent/update_Variable/ApplyGradientDescent"
+            },
+            "dur": 4,
+            "ts": 1523738360710194
+        }
+    ]
+}
