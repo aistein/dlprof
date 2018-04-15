@@ -1,0 +1,9 @@
+results: 
+- JIT is a best-effort comiplation paradigm
+- It does not seem to be working with our computer configurations
+- When JIT doesn't work, Tensorflow silently reverts to standard compilation
+- We can tell TF is reverting, because both code profiles in this directory are exactly the same
+- To examine code profiles:
+	* open google chrome
+	* chrome://tracing
+	* load the json file

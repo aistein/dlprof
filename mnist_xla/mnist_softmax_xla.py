@@ -30,14 +30,18 @@ FLAGS = None
 
 
 def main(_):
+  # Turn on experimental JIT Compilation for XLA
+  jit_scope = tf.contrib.compiler.jit.experimental_jit_scope
+
   # Import data
   mnist = input_data.read_data_sets(FLAGS.data_dir)
 
-  # Create the model
+  # Create the model 
   x = tf.placeholder(tf.float32, [None, 784])
   w = tf.Variable(tf.zeros([784, 10]))
   b = tf.Variable(tf.zeros([10]))
-  y = tf.matmul(x, w) + b
+  with jit_scope():
+    y = tf.matmul(x, w) + b
 
   # Define loss and optimizer
   y_ = tf.placeholder(tf.int64, [None])
@@ -51,14 +55,16 @@ def main(_):
   #
   # So here we use tf.losses.sparse_softmax_cross_entropy on the raw
   # logit outputs of 'y', and then average across the batch.
-  cross_entropy = tf.losses.sparse_softmax_cross_entropy(labels=y_, logits=y)
-  train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
+  with jit_scope():
+    cross_entropy = tf.losses.sparse_softmax_cross_entropy(labels=y_, logits=y)
+    train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 
   config = tf.ConfigProto()
   jit_level = 0
   if FLAGS.xla:
     # Turns on XLA JIT compilation.
-    jit_level = tf.OptimizerOptions.ON_1
+    print("xla is turned on Alex!")
+    jit_level = tf.OptimizerOptions.ON_2
 
   config.graph_options.optimizer_options.global_jit_level = jit_level
   run_metadata = tf.RunMetadata()
