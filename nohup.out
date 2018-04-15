@@ -1,0 +1,38 @@
+[I 14:04:04.634 NotebookApp] Writing notebook server cookie secret to /run/user/1002/jupyter/notebook_cookie_secret
+[I 14:04:05.371 NotebookApp] Serving notebooks from local directory: /home/ecbm6040-as5281/repositories/dlprof
+[I 14:04:05.372 NotebookApp] 0 active kernels
+[I 14:04:05.372 NotebookApp] The Jupyter Notebook is running at:
+[I 14:04:05.372 NotebookApp] http://0.0.0.0:8888/?token=92758e4bf27f64fb3662c1b07df12fc9e26ade08c7b10087
+[I 14:04:05.372 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:04:05.372 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://0.0.0.0:8888/?token=92758e4bf27f64fb3662c1b07df12fc9e26ade08c7b10087
+[I 14:04:35.569 NotebookApp] 302 GET / (127.0.0.1) 0.67ms
+[I 14:04:35.620 NotebookApp] 302 GET /tree? (127.0.0.1) 1.19ms
+[I 14:04:35.649 NotebookApp] 302 GET /tree? (127.0.0.1) 0.75ms
+[I 14:04:41.122 NotebookApp] 302 POST /login?next=%2Ftree%3F (127.0.0.1) 1.42ms
+[I 14:04:41.150 NotebookApp] 302 GET /login?next=%2Ftree%3F (127.0.0.1) 0.61ms
+[I 14:04:53.870 NotebookApp] Creating new notebook in 
+[W 14:04:56.416 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180415140404 (127.0.0.1) 10.52ms referer=http://localhost:2222/notebooks/Untitled.ipynb?kernel_name=python3
+[I 14:04:56.490 NotebookApp] Kernel started: ea5d6e8e-c572-473d-889a-a9b05369ceaa
+[I 14:04:57.115 NotebookApp] Adapting to protocol v5.1 for kernel ea5d6e8e-c572-473d-889a-a9b05369ceaa
+[I 14:06:56.674 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:08:56.508 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:10:56.504 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:12:56.504 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:14:56.503 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:16:56.506 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+2018-04-15 14:19:44.393876: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-04-15 14:19:47.000586: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-04-15 14:19:47.000951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:04.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-04-15 14:19:47.000975: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+2018-04-15 14:19:48.835705: I tensorflow/stream_executor/dso_loader.cc:139] successfully opened CUDA library libcupti.so.9.0 locally
+[I 14:20:56.506 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+2018-04-15 14:21:21.179176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7)
+[I 14:22:56.506 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
+[I 14:24:21.202 NotebookApp] Saving file at /Project-Update-4-15-18.ipynb
