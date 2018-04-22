@@ -1,3 +1,7 @@
+---
+excerpt: Using the recommended data ingestion pipelines can improve gpu utilization from 30% to 61% in simple models, and decrease training time by 50%
+---
+
 In Tensorflow the majority of users are most familiar with what is known as Feeding data. The Tensorflow feed mechanism allows users to inject data into any Tensor in their computational graph. Here is a simple example ([original source](https://www.tensorflow.org/api_guides/python/reading_data)).
 
 ```
