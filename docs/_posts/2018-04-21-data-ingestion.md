@@ -89,7 +89,7 @@ Of course, Tensorflow has a built in api for [Importing Data](https://www.tensor
 
 We can envision the problem with our model with the following image, taken from the Tensorflow performance guide link.
 
-![No Pipelining]({{ "/assets/datasets_without_pipelining.png" }})
+![No Pipelining]({{ "/dlprof/assets/datasets_without_pipelining.png" }})
 
 Our problem is actually twofold. First, our model is spending too much time waiting for python to break the dataset into random batches of Numpy arrays. Additionally, though less obvious, we then have to transfer that data from Python's environment to the Tensorflow session. Both of these problems can be solved simultaneously using Tensorflow's `tf.data` api. This api can ingest data from multiple file types like csv, text files, string inputs and even multiple files of those types. We will use `tfrecords` because they are described as the standard tensorflow format. For now we will assume you have your data in a binary `*.tfrecords` file of the proper format, but due to a lack of documentation, we will be making another, shorter, post on how to create these data files and work with the api.
 
@@ -138,6 +138,6 @@ Finally looking at the python profile we can obviously see that our cast to nump
 
 What we can imagine having happening now is that the Tensorflow api is able to read and preprocess data prior to our model requesting more data to train on. Rather than all the time spent idle as above, our model training now looks like the bottom diagram in the following image during each iteration.
 
-![Parallel Data Ingestion]({{ "/assets/datasets_parallel_map.png" }})
+![Parallel Data Ingestion]({{ "/dlprof/assets/datasets_parallel_map.png" }})
 
 In conclusion, inference and model training times have opportunity for vast improvement using simple, well known tools and concepts. Simply using the recommended input format, parallelizing data collection and preprocessing improved our training time by 50% which in long-running models is significant.
