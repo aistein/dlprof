@@ -144,10 +144,12 @@ def parse_fn(record):
 
 def get_dataset_iterator(loc, batch_size, max_len, pad_value):
     dataset = tf.data.TFRecordDataset(loc)
+    dataset = dataset.prefetch(batch_size)
     dataset = dataset.map(parse_fn, num_parallel_calls=batch_size)
     dataset = dataset.map(split_fn, num_parallel_calls=batch_size)
     dataset = dataset.map(get_truncate_fn(max_len), num_parallel_calls=batch_size)
     dataset = dataset.padded_batch(batch_size, padded_shapes=([max_len], [max_len], [None]), padding_values=(pad_value, pad_value, 0.0))
+    dataset = dataset.shuffle(26352, reshuffle_each_iteration=False)
     iterator = dataset.make_one_shot_iterator()
     return iterator
 
@@ -192,9 +194,8 @@ scoring_function = tf.estimator.Estimator(
 
 # from tensorflow.python import debug as tf_debug
 # hook = tf_debug.TensorBoardDebugHook("localhost:6060")
-hook = tf.train.ProfilerHook(save_steps=10,output_dir='./timelines/tfrecords/test1')
 s = time.time()
-scoring_function.train(input_fn=train_input_fn, hooks=[hook])
+scoring_function.train(input_fn=train_input_fn) # , hooks=[hook])
 e = time.time()
 print("ran {} seconds".format(e - s))
 
@@ -202,47 +203,47 @@ print("ran {} seconds".format(e - s))
 # In[12]:
 
 
-scoring_function.evaluate(input_fn=test_input_fn)
+# scoring_function.evaluate(input_fn=test_input_fn)
 
 
 # In[13]:
 
 
-action_movie_lover = """i really love action movies they are my favorite kind of movie because i love to watch the good guys
-win. some of my favorite actors are jet li and jackie chan because they were the last great actors who
-actually knew how to fight. modern action movie actors are just pretty faces and the editors swap camera
-angles when supposed hits make contact"""
-action_movie_hater = """I really hate action movies. jackie chan and jet li are the worst. their old fashioned
-special effects, if you can even call them that, are out dated and boring. why are people even still paying
-for them to make movies"""
-item = """this movie is great because of the way the strong, clever, hero saves the day at the end. as always
-jackie chans action directing and stunts are amazing, i'm so glad he doesn't use a stunt double liek
-some other actors that don't need to be mentioned"""
+# action_movie_lover = """i really love action movies they are my favorite kind of movie because i love to watch the good guys
+# win. some of my favorite actors are jet li and jackie chan because they were the last great actors who
+# actually knew how to fight. modern action movie actors are just pretty faces and the editors swap camera
+# angles when supposed hits make contact"""
+# action_movie_hater = """I really hate action movies. jackie chan and jet li are the worst. their old fashioned
+# special effects, if you can even call them that, are out dated and boring. why are people even still paying
+# for them to make movies"""
+# item = """this movie is great because of the way the strong, clever, hero saves the day at the end. as always
+# jackie chans action directing and stunts are amazing, i'm so glad he doesn't use a stunt double liek
+# some other actors that don't need to be mentioned"""
 
 
 # In[14]:
 
 
-def get_predict_input_fn(user, item, trun_len):
-    def predict_input_fn():
-        original_user_review = [bytes(v, "utf8") for v in user.split()]
-        original_item_review = [bytes(v, "utf8") for v in item.split()]
-        r_user = tf.constant([original_user_review + [b"unk"] * (trun_len - len(original_user_review))])
-        r_item = tf.constant([original_item_review + [b"unk"] * (trun_len - len(original_item_review))])
-        return (r_user, r_item), None
-    return predict_input_fn
+# def get_predict_input_fn(user, item, trun_len):
+#     def predict_input_fn():
+#         original_user_review = [bytes(v, "utf8") for v in user.split()]
+#         original_item_review = [bytes(v, "utf8") for v in item.split()]
+#         r_user = tf.constant([original_user_review + [b"unk"] * (trun_len - len(original_user_review))])
+#         r_item = tf.constant([original_item_review + [b"unk"] * (trun_len - len(original_item_review))])
+#         return (r_user, r_item), None
+#     return predict_input_fn
 
 
 # In[15]:
 
 
-prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_lover, item, truncate_len))
-print(next(prediction))
+# prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_lover, item, truncate_len))
+# print(next(prediction))
 
 
 # In[16]:
 
 
-prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_hater, item, truncate_len))
-print(next(prediction))
+# prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_hater, item, truncate_len))
+# print(next(prediction))
 

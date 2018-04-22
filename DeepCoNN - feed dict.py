@@ -8,7 +8,6 @@ import datetime
 import numpy as np
 import pandas as pd
 import pickle as pkl
-from tensorflow.python.client import timeline
 import tensorflow as tf
 import time
 
@@ -41,16 +40,16 @@ some other actors that don't need to be mentioned"""
 class Batch_Dataset(object):
     def __init__(self, user_review_location, item_review_location, rating_location, pad_length, pad_value, batch_size):
         user_review_list = [line.split()[:truncate_len] for line in self._get_lines(user_review_location)]
-        self.user_review_list = self._pad_if_necessary(user_review_list, pad_value, pad_length)
+        self.user_review_list = np.array(self._pad_if_necessary(user_review_list, pad_value, pad_length))
         
         item_review_list = [line.split()[:truncate_len] for line in self._get_lines(item_review_location)]
-        self.item_review_list = self._pad_if_necessary(item_review_list, pad_value, pad_length)
+        self.item_review_list = np.array(self._pad_if_necessary(item_review_list, pad_value, pad_length))
         
-        self.ratings = [float(rating) for rating in self._get_lines(rating_location)]
+        self.ratings = np.array([float(rating) for rating in self._get_lines(rating_location)])
         
-        self.current = 0
         self.batch_size = batch_size
-        self.stop_len = len(self.ratings)
+        self.iter = 0
+        self.stop_iter = len(self.ratings) / batch_size
     
     def _get_lines(self, fname):
         with open(fname, "rt") as data:
@@ -63,16 +62,15 @@ class Batch_Dataset(object):
         return self
     
     def __next__(self):
-        if self.current + self.batch_size > self.stop_len:
-            self.current = 0
-            self.prev = 0
+        self.iter += 1
+        if self.iter > self.stop_iter:
+            self.iter = 0
             raise StopIteration
         else:
-            self.prev = self.current
-            self.current += self.batch_size
-            return (np.array(self.user_review_list[self.prev: self.current]),
-                    np.array(self.item_review_list[self.prev: self.current]),
-                    np.array(self.ratings[self.prev: self.current]).reshape(self.batch_size, 1))
+            rand_indices = np.random.choice(range(len(self.ratings)), size=self.batch_size, replace=False)
+            return (np.array(self.user_review_list[rand_indices]),
+                    np.array(self.item_review_list[rand_indices]),
+                    np.array(self.ratings[rand_indices]).reshape(self.batch_size, 1))
 
 
 # In[5]:
@@ -149,20 +147,12 @@ train_op = optimizer.minimize(
 vars_init = tf.global_variables_initializer()
 tables_init = tf.tables_initializer()
 
+
 with tf.Session() as sess:
     
-    # options to add chrome-trace
-    options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
-    run_metadata = tf.RunMetadata()
-    
-    sess.run(vars_init, options=options, run_metadata=run_metadata)
+    sess.run(vars_init)
     sess.run(tables_init)
     
-    fetched_timeline = timeline.Timeline(run_metadata.step_stats)
-    chrome_trace = fetched_timeline.generate_chrome_trace_format()
-    with open('timeline_01.json', 'w') as f:
-        f.write(chrome_trace)
-
     dataset = Batch_Dataset("data/train_u_reviews.txt",
                             "data/train_i_reviews.txt",
                             "data/train_ratings.txt",
@@ -170,25 +160,18 @@ with tf.Session() as sess:
                             "unk",
                             batch_size)
     
-    i = 0
+#     i = 0
     for user_batch, item_batch, rating_batch in dataset:
         
-        i += 1
-        
+#         i += 1
         _, l = sess.run([train_op, loss], feed_dict={
             u_inputs: user_batch,
             i_inputs: item_batch,
             ratings_input: rating_batch
-        }, options=options, run_metadata=run_metadata)
-        if i % 101 == 0:
-            print("{}: epoch {}, loss {:.2f}".format(str(datetime.datetime.now()), i, l))
-
-        # Create the Timeline object, and write it to a json file
-        fetched_timeline = timeline.Timeline(run_metadata.step_stats)
-        chrome_trace = fetched_timeline.generate_chrome_trace_format()
-        with open('timeline_01.json', 'w') as f:
-            f.write(chrome_trace)
-
+        })
+#         if i % 101 == 0:
+#             print("{}: epoch {}, loss {:.2f}".format(str(datetime.datetime.now()), i, l))
+            
 e = time.time()
 
 print("ran {} seconds".format(e - s))

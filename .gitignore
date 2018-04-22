@@ -109,3 +109,5 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
+tf_logs
+*.h5
