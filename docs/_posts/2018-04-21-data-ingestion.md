@@ -106,7 +106,7 @@ def get_dataset_iterator(loc, batch_size, max_len, pad_value):
     dataset = dataset.map(split_fn, num_parallel_calls=batch_size)
     dataset = dataset.map(get_truncate_fn(max_len), num_parallel_calls=batch_size)
     dataset = dataset.padded_batch(batch_size, padded_shapes=([max_len], [max_len], [None]), padding_values=(pad_value, pad_value, 0.0))
-    dataset = dataset.shuffle(26352, reshuffle_each_iteration=False)
+    dataset = dataset.shuffle(26352)
     iterator = dataset.make_one_shot_iterator()
     return iterator
 ```
