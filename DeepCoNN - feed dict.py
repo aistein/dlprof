@@ -11,6 +11,8 @@ import pickle as pkl
 import tensorflow as tf
 import time
 
+from tensorflow.python import debug as tf_debug
+
 
 # In[2]:
 
@@ -149,7 +151,7 @@ tables_init = tf.tables_initializer()
 
 
 with tf.Session() as sess:
-    
+    sess = tf_debug.LocalCLIDebugWrapperSession(sess)
     sess.run(vars_init)
     sess.run(tables_init)
     
