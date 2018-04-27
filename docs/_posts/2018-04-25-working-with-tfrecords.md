@@ -10,7 +10,7 @@ The list of advantages is long, but unfortunately in the mass of improvement and
 
 So, how exactly do we create tfrecords? Below we have provided an example of turning strings into tfrecords of variable length. This example is important because all the examples in Tensorflow documentation transform images of the same size into TFRecrds of the same size. We, on the other hand will be working with text data, and would like tensorflow to handle the embedding creation and word-to-index transformation for us.
 
-```
+```python
 1.  def to_bytearray_feature(value):
 2.      return tf.train.Feature(bytes_list=tf.train.BytesList(value=[bytes(value, "utf8")]))
 3.  def wrap_float_value(value):
@@ -47,7 +47,7 @@ It is important to note that in order to read this data, the `user_review` field
 
 Now we will move on to reading our data from the demo.tfrecords file we wrote.
 
-```
+```python
 1.  def parse_fn(record):
 2.      features = {
 3.              "user_review": tf.FixedLenSequenceFeature([], tf.string, allow_missing=True),
