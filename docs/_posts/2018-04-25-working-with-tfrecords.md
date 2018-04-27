@@ -6,7 +6,7 @@ Every deep neural network training algorithm revolves around a stream of input d
 
 The list of advantages is long, but unfortunately in the mass of improvement and development done on Tensorflow, the tfrecords api was left poorly documented and poorly explained. One issue raised on github sums this up quite nicely.
 
-![Documentation Missing]({{ "/assets/tfrecords_documentation_dne.png" }})
+![Documentation Missing]({{ "/dlprof/assets/tfrecords_documentation_dne.png" }})
 
 So, how exactly do we create tfrecords? Below we have provided an example of turning strings into tfrecords of variable length. This example is important because all the examples in Tensorflow documentation transform images of the same size into TFRecrds of the same size. We, on the other hand will be working with text data, and would like tensorflow to handle the embedding creation and word-to-index transformation for us.
 
