@@ -1,5 +1,5 @@
 ---
-excerpt: Tensorboard is a the standard tool for visualizing deep neural networks. While we were all busy with visualizations, Tensorboard released a visual, interactive debugger.
+excerpt: Tensorboard is a the standard tool for visualizing deep neural networks. While we were all busy visualizing loss curves, Tensorboard released an interactive debugger.
 ---
 
 As many of us know, Tensorboard is the leading tool for visualizing deep neural networks. It provides everything from graphing losses and histograms of weight values to 3D embedding maps of images, or words. Additionally, some Tensorflow users are familiar with the Tensorflow debugger, tfdbg.
