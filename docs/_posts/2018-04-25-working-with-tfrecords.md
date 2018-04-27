@@ -11,28 +11,26 @@ The list of advantages is long, but unfortunately in the mass of improvement and
 So, how exactly do we create tfrecords? Below we have provided an example of turning strings into tfrecords of variable length. This example is important because all the examples in Tensorflow documentation transform images of the same size into TFRecrds of the same size. We, on the other hand will be working with text data, and would like tensorflow to handle the embedding creation and word-to-index transformation for us.
 
 ```
-def to_bytearray_feature(value):
-    return tf.train.Feature(bytes_list=tf.train.BytesList(value=[bytes(value, "utf8")]))
-def wrap_float_value(value):
-    return tf.train.Feature(float_list=tf.train.FloatList(value=[value]))
-
-tfrecords_filename = "data/demo.tfrecords"
-writer = tf.python_io.TFRecordWriter(tfrecords_filename)
-
-for user, item, rating in zip(train_user_lines, train_item_lines, train_ratings):
-    example = tf.train.Example(
-        features=tf.train.Features(
-            feature={
-                'user_review': to_bytearray_feature(user),
-                'item_review': to_bytearray_feature(item),
-                'rating': wrap_float_value(float(rating))
-            }
-        )
-    )
-
-    writer.write(example.SerializeToString())
-
-
+1.  def to_bytearray_feature(value):
+2.      return tf.train.Feature(bytes_list=tf.train.BytesList(value=[bytes(value, "utf8")]))
+3.  def wrap_float_value(value):
+4.      return tf.train.Feature(float_list=tf.train.FloatList(value=[value]))
+5.  
+6.  tfrecords_filename = "data/demo.tfrecords"
+7.  writer = tf.python_io.TFRecordWriter(tfrecords_filename)
+8.  
+9.  for user, item, rating in zip(train_user_lines, train_item_lines, train_ratings):
+10.     example = tf.train.Example(
+11.         features=tf.train.Features(
+12.             feature={
+13.                 'user_review': to_bytearray_feature(user),
+14.                 'item_review': to_bytearray_feature(item),
+15.                 'rating': wrap_float_value(float(rating))
+16.             }
+17.         )
+18.     )
+19. 
+20.     writer.write(example.SerializeToString())
 ```
 
 First, we will analyze the first two lines, inside out.
@@ -50,32 +48,31 @@ It is important to note that in order to read this data, the `user_review` field
 Now we will move on to reading our data from the demo.tfrecords file we wrote.
 
 ```
-def parse_fn(record):
-    features = {
-            "user_review": tf.FixedLenSequenceFeature([], tf.string, allow_missing=True),
-            "item_review": tf.FixedLenSequenceFeature([], tf.string, allow_missing=True),
-            "rating": tf.FixedLenFeature([1], tf.float32)
-        }
-    parsed_features = tf.parse_single_example(record, features)
-    return parsed_features["user_review"], parsed_features["item_review"], parsed_features["rating"]
-
-def split_fn(user, item, rating):
-    user = tf.string_split(user)
-    item = tf.string_split(item)
-    return user.values, item.values, rating
-
-def truncate_fn(user, item, rating):
-    return user[:400], item[:400], rating
-
-dataset = tf.data.TFRecordDataset("data/demo.tfrecords")
-dataset = dataset.map(parse_fn)
-dataset = dataset.map(split_fn)
-dataset = dataset.map(truncate_fn)
-dataset = dataset.padded_batch(16, padded_shapes=([400], [400], [None]), padding_values=("unk", "unk", 0.0))
-iterator = dataset.make_one_shot_iterator()
-data_point = iterator.get_next()
-data_point[0].eval(session=tf.Session())
-
+1.  def parse_fn(record):
+2.      features = {
+3.              "user_review": tf.FixedLenSequenceFeature([], tf.string, allow_missing=True),
+4.              "item_review": tf.FixedLenSequenceFeature([], tf.string, allow_missing=True),
+5.              "rating": tf.FixedLenFeature([1], tf.float32)
+6.          }
+7.      parsed_features = tf.parse_single_example(record, features)
+8.      return parsed_features["user_review"], parsed_features["item_review"], parsed_features["rating"]
+9.  
+10. def split_fn(user, item, rating):
+11.     user = tf.string_split(user)
+12.     item = tf.string_split(item)
+13.     return user.values, item.values, rating
+14. 
+15. def truncate_fn(user, item, rating):
+16.     return user[:400], item[:400], rating
+17. 
+18. dataset = tf.data.TFRecordDataset("data/demo.tfrecords")
+19. dataset = dataset.map(parse_fn)
+20. dataset = dataset.map(split_fn)
+21. dataset = dataset.map(truncate_fn)
+22. dataset = dataset.padded_batch(16, padded_shapes=([400], [400], [None]), padding_values=("unk", "unk", 0.0))
+23. iterator = dataset.make_one_shot_iterator()
+24. data_point = iterator.get_next()
+25. data_point[0].eval(session=tf.Session())
 ```
 
 This time it is best to start at the bottom. Line 18 creates a TFRecordDataset from our file. In our case there is one file, but if there were multiple files and our data did not fit in memory we could pass a list of files instead. Next on line 19 we call our `parse_fn` on each input value.
