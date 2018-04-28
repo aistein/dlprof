@@ -4,7 +4,9 @@ excerpt: Using the recommended data ingestion pipelines can improve gpu utilizat
 
 In Tensorflow the majority of users are most familiar with what is known as Feeding data. The Tensorflow feed mechanism allows users to inject data into any Tensor in their computational graph. Here is a simple example ([original source](https://www.tensorflow.org/api_guides/python/reading_data)).
 
-```
+## Build And Profile A Model
+
+```python
 with tf.Session():
   input = tf.placeholder(tf.float32)
   classifier = ...
@@ -13,14 +15,14 @@ with tf.Session():
 We have built a simple model based on [this](https://arxiv.org/pdf/1701.04783.pdf) paper that uses a feed dict to train. You can find the source code for our model [here](https://github.com/aistein/dlprof/blob/master/DeepCoNN%20-%20feed%20dict.ipynb). There are two important aspects to this model.
 
 First, you will see that we are using a `feed_dict` to run an interative optimization operation.
-```
+```python
 _, l = sess.run([train_op, loss], feed_dict={
     u_inputs: user_batch,
     i_inputs: item_batch,
     ratings_input: rating_batch
 ```
 Second, note that the `Batch_Dataset` class is iterable, and that it has the `__next__` function defined.
-```
+```python
 class Batch_Dataset(object):
     ...
     def __iter__(self):
@@ -40,7 +42,7 @@ class Batch_Dataset(object):
 As defined our `__next__` method will select a random subset from three numpy arrays, one containing user reviews of items, one containing reviews for an item by other users, and one containing the rating this user gave this item. It is important to note that this is text data that has already been cleaned and only needs to be converted to indices, then embeddings, in order to pass them through our network.
 
 We use tensorflow to do the conversion by defining a HashTable and embeddings Variable.
-```
+```python
 table = tf.contrib.lookup.HashTable(
   tf.contrib.lookup.KeyValueTensorInitializer(keys, values), -1
 )
@@ -69,6 +71,9 @@ Sat Apr 21 22:34:11 2018
 | N/A   63C    P0    65W / 149W |  10954MiB / 11441MiB |     30%      Default |
 +-------------------------------+----------------------+----------------------+
 ```
+
+## Getting The Most Out Of Tensorflow
+
 For our case this may be sufficient. Waiting only one minute for a model to train is amazing compared to other models like AlphaGo which take 4 - 6 weeks even with all the resources available to DeepMind. According to the Tensorflow documentation [here](https://www.tensorflow.org/performance/performance_guide)
 
 > If GPU utilization is not approaching 80-100%, then the input pipeline may be the bottleneck.
@@ -77,6 +82,7 @@ To see what may be holding us back from full gpu utilization we decided to run a
 ```
 python -m cProfile -s tottime DeepCoNN\ -\ feed\ dict.py > profile.txt
 ```
+
 
 Looking inside profile.txt we find the following.
 ```
@@ -98,7 +104,7 @@ We can envision the problem with our model with the following image, taken from 
 Our problem is actually twofold. First, our model is spending too much time waiting for python to break the dataset into random batches of Numpy arrays. Additionally, though less obvious, we then have to transfer that data from Python's environment to the Tensorflow session. Both of these problems can be solved simultaneously using Tensorflow's `tf.data` api. This api can ingest data from multiple file types like csv, text files, string inputs and even multiple files of those types. We will use `tfrecords` because they are described as the standard tensorflow format. For now we will assume you have your data in a binary `*.tfrecords` file of the proper format, but due to a lack of documentation, we will be making another, shorter, post on how to create these data files and work with the api.
 
 Additionally, we will change our model to use the Estimator api to ingest data in order to handle variable, queue, and table initialization as well as removing the call to `tf_run` and `feed_dict` usage. You can find the final model [here](https://github.com/aistein/dlprof/blob/master/DeepCoNN%20-%20tfrecords.ipynb). Importantly, you will note that we have defined our model construction in a single function with `model_fn(features, labels, mode)`. This model is fed data through the `features` parameter via an iterator built by the following function.
-```
+```python
 def get_dataset_iterator(loc, batch_size, max_len, pad_value):
     dataset = tf.data.TFRecordDataset(loc)
     dataset = dataset.prefetch(batch_size)
