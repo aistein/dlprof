@@ -4,7 +4,7 @@ excerpt: Two gpus > One gpu?
 
 ## Taking Advantage of Graph Structure
 After seeing the performance improvements of using GPUs to train a model we want to see if we could take advantage of our computational graph structure to use multiple GPUs and parallelize computation. In our particular case the computational graph has two tower-like structures, a convolution, activation, fully connected layer, and activation, over a set of user reviews, and a mirroring convolution over a set of item reviews.
-![parallel towers]({{ "/assets/parallel-tower-structure.png" }})
+![parallel towers]({{ "/dlprof/assets/parallel-tower-structure.png" }})
 
 It seems like a model with such structure could easily be parallelized by placing the two tower operations on different gpus.
 
