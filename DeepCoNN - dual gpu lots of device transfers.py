@@ -4,6 +4,7 @@
 # In[1]:
 
 
+import numpy as np
 import pandas as pd
 import pickle as pkl
 import tensorflow as tf
@@ -17,17 +18,17 @@ def model_fn(features, labels, mode):
     emb_size = 50
     filters=10
     kernel_size=3
-    
+
     with open("data/dictionary.pkl", "rb") as f:
         dictionary = pkl.load(f)
-    
+
     values = list(range(len(dictionary)))
     keys = list(dictionary)
-    
+
     table = tf.contrib.lookup.HashTable(
       tf.contrib.lookup.KeyValueTensorInitializer(keys, values), -1
     )
-    
+
     word_embeddings = tf.get_variable(
         "word_embeddings",
         shape=[len(dictionary), emb_size]
@@ -52,7 +53,7 @@ def model_fn(features, labels, mode):
         user_flat = tf.layers.flatten(user_max_pool1)
     with tf.device("/gpu:0"):
         user_dense = tf.layers.dense(user_flat, 64, activation=tf.nn.relu)
-    
+
     with tf.device("/gpu:1"):
         i_inputs = features[1]
     with tf.device("/gpu:0"):
@@ -73,15 +74,15 @@ def model_fn(features, labels, mode):
         item_flat = tf.layers.flatten(item_max_pool1)
     with tf.device("/gpu:1"):
         item_dense = tf.layers.dense(item_flat, 64, activation=tf.nn.relu)
-    
+
     predictions = tf.reduce_sum( tf.multiply( user_dense, item_dense ), 1, keep_dims=True )
-    
+
     output = {
         "rating": predictions,
         "user_review_embedding": user_flat,
         "item_review_embedding": item_flat
     }
-    
+
     if mode == tf.estimator.ModeKeys.PREDICT:
         return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
 
@@ -201,11 +202,16 @@ scoring_function = tf.estimator.Estimator(
 
 # from tensorflow.python import debug as tf_debug
 # hook = tf_debug.TensorBoardDebugHook("localhost:6060")
-s = time.time()
-scoring_function.train(input_fn=train_input_fn) # , hooks=[hook])
-e = time.time()
-print("ran {} seconds".format(e - s))
 
+times = []
+for i in range(5):
+    s = time.time()
+    scoring_function.train(input_fn=train_input_fn) # , hooks=[hook])
+    e = time.time()
+    runtime = e - s
+    print("ran {} seconds".format(runtime))
+    times.append(runtime)
+print("average runtime: {}".format(np.mean(times)))
 
 # In[ ]:
 

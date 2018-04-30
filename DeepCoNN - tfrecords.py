@@ -4,6 +4,7 @@
 # In[1]:
 
 
+import numpy as np
 import pandas as pd
 import pickle as pkl
 import tensorflow as tf
@@ -17,31 +18,31 @@ def model_fn(features, labels, mode):
     emb_size = 50
     filters=10
     kernel_size=3
-    
+
     with open("data/dictionary.pkl", "rb") as f:
         dictionary = pkl.load(f)
-    
+
     values = list(range(len(dictionary)))
     keys = list(dictionary)
-    
+
     table = tf.contrib.lookup.HashTable(
       tf.contrib.lookup.KeyValueTensorInitializer(keys, values), -1
     )
-    
+
     word_embeddings = tf.get_variable(
         "word_embeddings",
         shape=[len(dictionary), emb_size]
     )
-    
+
     u_inputs = features[0]
     i_inputs = features[1]
-    
+
     u_inputs = table.lookup(u_inputs)
     i_inputs = table.lookup(i_inputs)
 
     u_inputs = tf.nn.embedding_lookup(word_embeddings, u_inputs)
     i_inputs = tf.nn.embedding_lookup(word_embeddings, i_inputs)
-    
+
     user_conv1 = tf.layers.conv1d(
         u_inputs,
         filters,
@@ -66,15 +67,15 @@ def model_fn(features, labels, mode):
 
     user_dense = tf.layers.dense(user_flat, 64, activation=tf.nn.relu)
     item_dense = tf.layers.dense(item_flat, 64, activation=tf.nn.relu)
-    
+
     predictions = tf.reduce_sum( tf.multiply( user_dense, item_dense ), 1, keep_dims=True )
-    
+
     output = {
         "rating": predictions,
         "user_review_embedding": user_flat,
         "item_review_embedding": item_flat
     }
-    
+
     if mode == tf.estimator.ModeKeys.PREDICT:
         return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
 
@@ -194,11 +195,15 @@ scoring_function = tf.estimator.Estimator(
 
 # from tensorflow.python import debug as tf_debug
 # hook = tf_debug.TensorBoardDebugHook("localhost:6060")
-s = time.time()
-scoring_function.train(input_fn=train_input_fn) # , hooks=[hook])
-e = time.time()
-print("ran {} seconds".format(e - s))
-
+times = []
+for i in range(5):
+    s = time.time()
+    scoring_function.train(input_fn=train_input_fn) # , hooks=[hook])
+    e = time.time()
+    runtime = e - s
+    print("ran {} seconds".format(runtime))
+    times.append(runtime)
+print("average runtime: {}".format(np.mean(times)))
 
 # In[12]:
 
