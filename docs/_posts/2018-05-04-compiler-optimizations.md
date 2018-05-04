@@ -5,7 +5,7 @@ excerpt: the uncertain and treacherous path of building tensorflow from scratch
 ## Why Build from Scratch?
 The Tensorflow team's prime objective is to spread the use of its framework over as broad an audience as possible.  There are many classes of users who wish to take advantage of deep learning, from students to researchers to professional engineering teams.  It makes sense that by default Tensorflow has a standard set of configurations because not every use-case requires optimization.  However, the advanced users will be interested in fine-tuning the software to meet their needs.  Unfortunately, the instructions provided by Tensorflow towards this end are rather sparse.
 
-### Overview
+## Overview
 In this tutorial - which we have adapted from a fabulous series of [posts](https://www.pugetsystems.com/labs/hpc/Build-TensorFlow-CPU-with-MKL-and-Anaconda-Python-3-6-using-a-Docker-Container-1133/) by Dr. Donald Kinghorn at Puget Systems - we will walk through compiling Tensorflow from scratch three times: (1) Using the Intel MKL CPU optimizations; (2) Enabling the accelerated linear algebra (XLA) framework; (3) Combining these optimizations with GPU capability.  We will be using Docker containers to insulate our systems from the mess of compilation.  The result in each case will be a .whl file which can be conda-installed in a new environment.  **Important:** It is expected that you have Anaconda3 with Python3.6 on your system.
 
 ### Baseline: Compiling TF for CPU with No Optimizations
@@ -38,7 +38,12 @@ produces the following results:
  ```
 
 A more in depth performance comparison is the subject of a later section in this post, but let us briefly inspect the output.  The given information states that we have certain capabilities on our CPU which are not being utilized by our Tensorflow build: SSE4.1 SSE4.2 AVX AVX2 FMA.  What are they?
-**SSE4 Instructions:** "Streaming SIMD Extensions 4". These are assembly instructions for Intel and AMD processors which allow for "packed" read/writes, string comparisons, and integer operations.
-**AVX Instructions:** "Adanced Vector Extensions" allow Intel and AMD processors to do mathematical operations and memory manipulations on up to 256 bits of input data at a time.
-**FMA Instrucions:** "Fused-Multiply Accumulate" instructuions are exactly as the name implies: In a single basic computational step, Intel and AMD processors with these extensions can - for example - take 3 inputs a,b,c and produce a = a*c + b.
+-**SSE4 Instructions:** "Streaming SIMD Extensions 4". These are assembly instructions for Intel and AMD processors which allow for "packed" read/writes, string comparisons, and integer operations.
+-**AVX Instructions:** "Adanced Vector Extensions" allow Intel and AMD processors to do mathematical operations and memory manipulations on up to 256 bits of input data at a time.
+-**FMA Instrucions:** "Fused-Multiply Accumulate" instructuions are exactly as the name implies: In a single basic computational step, Intel and AMD processors with these extensions can - for example - take 3 inputs a,b,c and produce a = a*c + b.
 It is clear that having these instruction sets enabled in our Tensorflow build would improve the performance of any program that could benefit from SIMD (single-instruction multiple-data), and matrix multiplication is exactly one such application!
+
+Now you may be thinking "though these instructions can help with SIMD on the CPU, why should we even bother? Afterall, isn't SIMD exactly what GPGPU is for?!"  That is a very good question without a straightforward answer, and its discussion is certainly beyond the scope of this post.  For a thorough understanding of the complexities of this question, check out this (somewhat outdated) white-paper by Intel, ["Debunking the 100x GPU vs. CPU Myth"](http://sbel.wisc.edu/Courses/ME964/Literature/LeeDebunkGPU2010.pdf).
+
+
+took 186.71327686309814 seconds
