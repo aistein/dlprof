@@ -100,6 +100,7 @@ ENV/
 # mypy
 .mypy_cache/
 
+# misc
 data
 logs
 *nohup.out
@@ -111,3 +112,9 @@ _site
 Gemfile.lock
 tf_logs
 *.h5
+
+# intel_mkl
+intel_mkl/*.sh
+intel_mkl/cifar10
+intel_mkl/TF-build*
+intel_mkl/nvidia_cloud_registry_gpg_key.key
