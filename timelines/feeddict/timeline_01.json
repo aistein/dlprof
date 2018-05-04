@@ -1,0 +1,6737 @@
+{
+    "traceEvents": [
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 0,
+            "args": {
+                "name": "Allocators"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 1,
+            "args": {
+                "name": "/device:GPU:0/stream:15 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 2,
+            "args": {
+                "name": "/device:GPU:0/stream:15 Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 3,
+            "args": {
+                "name": "/device:GPU:0/stream:14 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 4,
+            "args": {
+                "name": "/device:GPU:0/stream:14 Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 5,
+            "args": {
+                "name": "/device:GPU:0/memcpy Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 6,
+            "args": {
+                "name": "/device:GPU:0/memcpy Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 7,
+            "args": {
+                "name": "/device:GPU:0/stream:all Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 8,
+            "args": {
+                "name": "/device:GPU:0/stream:all Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 9,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 10,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 11,
+            "args": {
+                "name": "/device:GPU:0/stream:13 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 12,
+            "args": {
+                "name": "/device:GPU:0/stream:13 Tensors"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 13,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 14,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Tensors"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYDtoH",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1523836907464715,
+            "dur": 2,
+            "args": {
+                "name": "edge_448_mean_squared_error/value",
+                "op": "MEMCPYDtoH"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 3,
+            "tid": 0,
+            "ts": 1523836907453290,
+            "dur": 1,
+            "args": {
+                "name": "edge_445__arg_ratings_0_1",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 3,
+            "tid": 0,
+            "ts": 1523836907456345,
+            "dur": 16,
+            "args": {
+                "name": "edge_10_hash_table_Lookup",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 3,
+            "tid": 0,
+            "ts": 1523836907458068,
+            "dur": 16,
+            "args": {
+                "name": "edge_12_hash_table_Lookup_1",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 3,
+            "tid": 0,
+            "ts": 1523836907462019,
+            "dur": 34,
+            "args": {
+                "name": "edge_312_Adam/update_word_embeddings/Unique",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 3,
+            "tid": 0,
+            "ts": 1523836907462082,
+            "dur": 4,
+            "args": {
+                "name": "edge_319_Adam/update_word_embeddings/Unique",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907453040,
+            "dur": 1,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907453241,
+            "dur": 1,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign_1",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907453290,
+            "dur": 1,
+            "args": {
+                "name": "edge_445__arg_ratings_0_1",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907456345,
+            "dur": 16,
+            "args": {
+                "name": "edge_10_hash_table_Lookup",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907458068,
+            "dur": 16,
+            "args": {
+                "name": "edge_12_hash_table_Lookup_1",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907462019,
+            "dur": 34,
+            "args": {
+                "name": "edge_312_Adam/update_word_embeddings/Unique",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYHtoD",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907462082,
+            "dur": 4,
+            "args": {
+                "name": "edge_319_Adam/update_word_embeddings/Unique",
+                "op": "MEMCPYHtoD"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907463288,
+            "dur": 1,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907464390,
+            "dur": 1,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MEMCPYDtoH",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907464715,
+            "dur": 2,
+            "args": {
+                "name": "edge_448_mean_squared_error/value",
+                "op": "MEMCPYDtoH"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907468746,
+            "dur": 1,
+            "args": {
+                "name": "gradients/concat",
+                "op": "ConcatV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907468835,
+            "dur": 1,
+            "args": {
+                "name": "gradients/concat",
+                "op": "ConcatV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907471799,
+            "dur": 1,
+            "args": {
+                "name": "Adam/Assign",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 5,
+            "tid": 0,
+            "ts": 1523836907471809,
+            "dur": 1,
+            "args": {
+                "name": "Adam/Assign_1",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907452435,
+            "dur": 192,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_2",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907452632,
+            "dur": 191,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_5",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907452828,
+            "dur": 6,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub_1",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907452839,
+            "dur": 5,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907453255,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt",
+                "op": "Sqrt"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907453267,
+            "dur": 6,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907453280,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv",
+                "op": "RealDiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Cast",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907462370,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/ToFloat_1",
+                "op": "Cast"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907462405,
+            "dur": 169,
+            "args": {
+                "name": "embedding_lookup",
+                "op": "Gather"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907462578,
+            "dur": 118,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907462704,
+            "dur": 8,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907462716,
+            "dur": 347,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463069,
+            "dur": 33,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463107,
+            "dur": 26,
+            "args": {
+                "name": "user_conv/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463137,
+            "dur": 17,
+            "args": {
+                "name": "user_conv/Tanh",
+                "op": "Tanh"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463159,
+            "dur": 30,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463193,
+            "dur": 53,
+            "args": {
+                "name": "max_pooling1d/MaxPool",
+                "op": "MaxPool"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463253,
+            "dur": 32,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463294,
+            "dur": 7,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463305,
+            "dur": 166,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463476,
+            "dur": 7,
+            "args": {
+                "name": "dense/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463487,
+            "dur": 6,
+            "args": {
+                "name": "dense/Relu",
+                "op": "Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463498,
+            "dur": 170,
+            "args": {
+                "name": "embedding_lookup_1",
+                "op": "Gather"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463673,
+            "dur": 118,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463797,
+            "dur": 8,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907463809,
+            "dur": 349,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464163,
+            "dur": 32,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464200,
+            "dur": 26,
+            "args": {
+                "name": "item_conv/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464230,
+            "dur": 17,
+            "args": {
+                "name": "item_conv/Tanh",
+                "op": "Tanh"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464252,
+            "dur": 30,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464286,
+            "dur": 52,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool",
+                "op": "MaxPool"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464344,
+            "dur": 32,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464395,
+            "dur": 7,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464416,
+            "dur": 171,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464591,
+            "dur": 7,
+            "args": {
+                "name": "dense_1/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464603,
+            "dur": 6,
+            "args": {
+                "name": "dense_1/Relu",
+                "op": "Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464613,
+            "dur": 7,
+            "args": {
+                "name": "Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464625,
+            "dur": 8,
+            "args": {
+                "name": "Sum",
+                "op": "Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "SquaredDifference",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464639,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/SquaredDifference",
+                "op": "SquaredDifference"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464649,
+            "dur": 8,
+            "args": {
+                "name": "mean_squared_error/Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464661,
+            "dur": 7,
+            "args": {
+                "name": "mean_squared_error/Sum",
+                "op": "Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464673,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/div",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464683,
+            "dur": 6,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/sub",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Select",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464694,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/value",
+                "op": "Select"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464706,
+            "dur": 7,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tile",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464717,
+            "dur": 9,
+            "args": {
+                "name": "gradients/Sum_grad/Tile",
+                "op": "Tile"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464732,
+            "dur": 6,
+            "args": {
+                "name": "gradients/Mul_grad/Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464743,
+            "dur": 6,
+            "args": {
+                "name": "gradients/Mul_grad/Mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464755,
+            "dur": 6,
+            "args": {
+                "name": "gradients/dense/Relu_grad/ReluGrad",
+                "op": "ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464766,
+            "dur": 6,
+            "args": {
+                "name": "gradients/dense_1/Relu_grad/ReluGrad",
+                "op": "ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464795,
+            "dur": 9,
+            "args": {
+                "name": "gradients/dense/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464825,
+            "dur": 8,
+            "args": {
+                "name": "gradients/dense_1/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464838,
+            "dur": 106,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907464948,
+            "dur": 60,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul_1",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465012,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465025,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465037,
+            "dur": 12,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465055,
+            "dur": 104,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465163,
+            "dur": 60,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul_1",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465233,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465246,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465258,
+            "dur": 15,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465278,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465333,
+            "dur": 51,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465389,
+            "dur": 80,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465474,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465528,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465581,
+            "dur": 80,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465677,
+            "dur": 32,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465714,
+            "dur": 30,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465749,
+            "dur": 61,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465817,
+            "dur": 61,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465883,
+            "dur": 32,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465922,
+            "dur": 30,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907465957,
+            "dur": 41,
+            "args": {
+                "name": "gradients/user_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466016,
+            "dur": 26,
+            "args": {
+                "name": "gradients/item_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466067,
+            "dur": 272,
+            "args": {
+                "name": "gradients/user_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466357,
+            "dur": 274,
+            "args": {
+                "name": "gradients/item_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466636,
+            "dur": 9,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466650,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466663,
+            "dur": 14,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466681,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466694,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466706,
+            "dur": 12,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466723,
+            "dur": 31,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466758,
+            "dur": 30,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466793,
+            "dur": 8,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466806,
+            "dur": 40,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907466850,
+            "dur": 271,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467136,
+            "dur": 443,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467584,
+            "dur": 8,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467596,
+            "dur": 7,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467608,
+            "dur": 42,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467655,
+            "dur": 266,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907467943,
+            "dur": 441,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468389,
+            "dur": 7,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468408,
+            "dur": 124,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468537,
+            "dur": 123,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-1-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468665,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468678,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468690,
+            "dur": 13,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468707,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468719,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468731,
+            "dur": 10,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "UnsortedSegmentSum",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468923,
+            "dur": 9,
+            "args": {
+                "name": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "op": "UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "UnsortedSegmentSum",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907468937,
+            "dur": 1496,
+            "args": {
+                "name": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "op": "UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470446,
+            "dur": 14,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470465,
+            "dur": 24,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_3",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470493,
+            "dur": 32,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd",
+                "op": "ScatterAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470530,
+            "dur": 22,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_4",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470557,
+            "dur": 188,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_6",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470749,
+            "dur": 33,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd_1",
+                "op": "ScatterAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470786,
+            "dur": 194,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt_1",
+                "op": "Sqrt"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907470985,
+            "dur": 189,
+            "args": {
+                "name": "Adam/update_word_embeddings/add",
+                "op": "Add"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907471179,
+            "dur": 304,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv_1",
+                "op": "RealDiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907471492,
+            "dur": 281,
+            "args": {
+                "name": "Adam/update_word_embeddings/AssignSub",
+                "op": "AssignSub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907471778,
+            "dur": 7,
+            "args": {
+                "name": "Adam/mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 7,
+            "tid": 0,
+            "ts": 1523836907471789,
+            "dur": 6,
+            "args": {
+                "name": "Adam/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907452866,
+            "dur": 6,
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Arg",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907452876,
+            "dur": 80,
+            "args": {
+                "name": "_arg_user_inputs_0_2",
+                "op": "_Arg"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Arg",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907452958,
+            "dur": 5,
+            "args": {
+                "name": "_arg_ratings_0_1",
+                "op": "_Arg"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Arg",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907452966,
+            "dur": 61,
+            "args": {
+                "name": "_arg_item_inputs_0_0",
+                "op": "_Arg"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907453029,
+            "dur": 5,
+            "args": {
+                "name": "hash_table/Const",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "HashTableV2",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907453141,
+            "dur": 16,
+            "args": {
+                "name": "hash_table",
+                "op": "HashTableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "LookupTableFindV2",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907453159,
+            "dur": 3136,
+            "args": {
+                "name": "hash_table_Lookup",
+                "op": "LookupTableFindV2",
+                "input0": "hash_table",
+                "input1": "_arg_user_inputs_0_2",
+                "input2": "hash_table/Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "LookupTableFindV2",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907456407,
+            "dur": 1623,
+            "args": {
+                "name": "hash_table_Lookup_1",
+                "op": "LookupTableFindV2",
+                "input0": "hash_table",
+                "input1": "_arg_item_inputs_0_0",
+                "input2": "hash_table/Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Retval",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907471847,
+            "dur": 6,
+            "args": {
+                "name": "_retval_mean_squared_error/value_0_0",
+                "op": "_Retval",
+                "input0": "mean_squared_error/value/_19"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "mean_squared_error/value",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463898,
+            "id": 0
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "mean_squared_error/value",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907471847,
+            "id": 0
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907452435,
+            "dur": 192,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_2",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907452632,
+            "dur": 191,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_5",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907452828,
+            "dur": 6,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub_1",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907452839,
+            "dur": 5,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907453255,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt",
+                "op": "Sqrt"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907453267,
+            "dur": 6,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907453280,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv",
+                "op": "RealDiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Cast",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907462370,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/ToFloat_1",
+                "op": "Cast"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907462405,
+            "dur": 169,
+            "args": {
+                "name": "embedding_lookup",
+                "op": "Gather"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907462578,
+            "dur": 118,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907462704,
+            "dur": 8,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907462716,
+            "dur": 347,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463069,
+            "dur": 33,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463107,
+            "dur": 26,
+            "args": {
+                "name": "user_conv/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463137,
+            "dur": 17,
+            "args": {
+                "name": "user_conv/Tanh",
+                "op": "Tanh"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463159,
+            "dur": 30,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463193,
+            "dur": 53,
+            "args": {
+                "name": "max_pooling1d/MaxPool",
+                "op": "MaxPool"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463253,
+            "dur": 32,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463294,
+            "dur": 7,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463305,
+            "dur": 166,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463476,
+            "dur": 7,
+            "args": {
+                "name": "dense/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463487,
+            "dur": 6,
+            "args": {
+                "name": "dense/Relu",
+                "op": "Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463498,
+            "dur": 170,
+            "args": {
+                "name": "embedding_lookup_1",
+                "op": "Gather"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463673,
+            "dur": 118,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463797,
+            "dur": 8,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907463809,
+            "dur": 349,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D",
+                "op": "Conv2D"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464163,
+            "dur": 32,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464200,
+            "dur": 26,
+            "args": {
+                "name": "item_conv/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464230,
+            "dur": 17,
+            "args": {
+                "name": "item_conv/Tanh",
+                "op": "Tanh"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464252,
+            "dur": 30,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464286,
+            "dur": 52,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool",
+                "op": "MaxPool"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464344,
+            "dur": 32,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464395,
+            "dur": 7,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464416,
+            "dur": 171,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464591,
+            "dur": 7,
+            "args": {
+                "name": "dense_1/BiasAdd",
+                "op": "BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464603,
+            "dur": 6,
+            "args": {
+                "name": "dense_1/Relu",
+                "op": "Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464613,
+            "dur": 7,
+            "args": {
+                "name": "Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464625,
+            "dur": 8,
+            "args": {
+                "name": "Sum",
+                "op": "Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "SquaredDifference",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464639,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/SquaredDifference",
+                "op": "SquaredDifference"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464649,
+            "dur": 8,
+            "args": {
+                "name": "mean_squared_error/Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464661,
+            "dur": 7,
+            "args": {
+                "name": "mean_squared_error/Sum",
+                "op": "Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464673,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/div",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464683,
+            "dur": 6,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/sub",
+                "op": "Sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Select",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464694,
+            "dur": 6,
+            "args": {
+                "name": "mean_squared_error/value",
+                "op": "Select"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464706,
+            "dur": 7,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tile",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464717,
+            "dur": 9,
+            "args": {
+                "name": "gradients/Sum_grad/Tile",
+                "op": "Tile"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464732,
+            "dur": 6,
+            "args": {
+                "name": "gradients/Mul_grad/Mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464743,
+            "dur": 6,
+            "args": {
+                "name": "gradients/Mul_grad/Mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464755,
+            "dur": 6,
+            "args": {
+                "name": "gradients/dense/Relu_grad/ReluGrad",
+                "op": "ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464766,
+            "dur": 6,
+            "args": {
+                "name": "gradients/dense_1/Relu_grad/ReluGrad",
+                "op": "ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464795,
+            "dur": 9,
+            "args": {
+                "name": "gradients/dense/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464825,
+            "dur": 8,
+            "args": {
+                "name": "gradients/dense_1/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464838,
+            "dur": 106,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907464948,
+            "dur": 60,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul_1",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465012,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465025,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465037,
+            "dur": 12,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465055,
+            "dur": 104,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465163,
+            "dur": 60,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul_1",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465233,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465246,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465258,
+            "dur": 15,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465278,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465333,
+            "dur": 51,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465389,
+            "dur": 80,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465474,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465528,
+            "dur": 49,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465581,
+            "dur": 80,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465677,
+            "dur": 32,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465714,
+            "dur": 30,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465749,
+            "dur": 61,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465817,
+            "dur": 61,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465883,
+            "dur": 32,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465922,
+            "dur": 30,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907465957,
+            "dur": 41,
+            "args": {
+                "name": "gradients/user_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466016,
+            "dur": 26,
+            "args": {
+                "name": "gradients/item_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466067,
+            "dur": 272,
+            "args": {
+                "name": "gradients/user_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466357,
+            "dur": 274,
+            "args": {
+                "name": "gradients/item_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466636,
+            "dur": 9,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466650,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466663,
+            "dur": 14,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466681,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466694,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466706,
+            "dur": 12,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466723,
+            "dur": 31,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466758,
+            "dur": 30,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466793,
+            "dur": 8,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466806,
+            "dur": 40,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907466850,
+            "dur": 271,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467136,
+            "dur": 443,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467584,
+            "dur": 8,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467596,
+            "dur": 7,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467608,
+            "dur": 42,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467655,
+            "dur": 266,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907467943,
+            "dur": 441,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468389,
+            "dur": 7,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468408,
+            "dur": 124,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468537,
+            "dur": 123,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-1-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468665,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468678,
+            "dur": 8,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468690,
+            "dur": 13,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468707,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468719,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468731,
+            "dur": 10,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "UnsortedSegmentSum",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468923,
+            "dur": 9,
+            "args": {
+                "name": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "op": "UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "UnsortedSegmentSum",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907468937,
+            "dur": 1496,
+            "args": {
+                "name": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "op": "UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470446,
+            "dur": 14,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470465,
+            "dur": 24,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_3",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470493,
+            "dur": 32,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd",
+                "op": "ScatterAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470530,
+            "dur": 22,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_4",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470557,
+            "dur": 188,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_6",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470749,
+            "dur": 33,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd_1",
+                "op": "ScatterAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470786,
+            "dur": 194,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt_1",
+                "op": "Sqrt"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907470985,
+            "dur": 189,
+            "args": {
+                "name": "Adam/update_word_embeddings/add",
+                "op": "Add"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471179,
+            "dur": 304,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv_1",
+                "op": "RealDiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471492,
+            "dur": 281,
+            "args": {
+                "name": "Adam/update_word_embeddings/AssignSub",
+                "op": "AssignSub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471778,
+            "dur": 7,
+            "args": {
+                "name": "Adam/mul",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471789,
+            "dur": 6,
+            "args": {
+                "name": "Adam/mul_1",
+                "op": "Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907453040,
+            "dur": 1,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907453241,
+            "dur": 1,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign_1",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907463288,
+            "dur": 1,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907464390,
+            "dur": 1,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907468746,
+            "dur": 1,
+            "args": {
+                "name": "gradients/concat",
+                "op": "ConcatV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 11,
+            "tid": 1,
+            "ts": 1523836907468835,
+            "dur": 1,
+            "args": {
+                "name": "gradients/concat",
+                "op": "ConcatV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471799,
+            "dur": 1,
+            "args": {
+                "name": "Adam/Assign",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 11,
+            "tid": 0,
+            "ts": 1523836907471809,
+            "dur": 1,
+            "args": {
+                "name": "Adam/Assign_1",
+                "op": "Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451598,
+            "dur": 40,
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451651,
+            "dur": 16,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451669,
+            "dur": 14,
+            "args": {
+                "name": "dense_1/kernel",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451685,
+            "dur": 5,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub_2",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451692,
+            "dur": 7,
+            "args": {
+                "name": "word_embeddings/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451701,
+            "dur": 6,
+            "args": {
+                "name": "gradients/embedding_lookup_grad/concat",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451709,
+            "dur": 4,
+            "args": {
+                "name": "gradients/concat/axis",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451715,
+            "dur": 4,
+            "args": {
+                "name": "gradients/embedding_lookup_grad/ExpandDims",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451721,
+            "dur": 6,
+            "args": {
+                "name": "dense_1/bias",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451729,
+            "dur": 4,
+            "args": {
+                "name": "Adam/update_word_embeddings/strided_slice/stack",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451734,
+            "dur": 4,
+            "args": {
+                "name": "Adam/update_word_embeddings/strided_slice/stack_1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451739,
+            "dur": 6,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub_3",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451746,
+            "dur": 7,
+            "args": {
+                "name": "word_embeddings/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451754,
+            "dur": 7,
+            "args": {
+                "name": "user_conv/kernel/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451762,
+            "dur": 6,
+            "args": {
+                "name": "user_conv/kernel/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451769,
+            "dur": 4,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Const_1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451775,
+            "dur": 4,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Squeeze_grad/Shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451799,
+            "dur": 4,
+            "args": {
+                "name": "gradients/user_conv/conv1d/ExpandDims_1_grad/Shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451804,
+            "dur": 6,
+            "args": {
+                "name": "user_conv/bias/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451811,
+            "dur": 7,
+            "args": {
+                "name": "user_conv/bias/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451819,
+            "dur": 5,
+            "args": {
+                "name": "gradients/max_pooling1d/Squeeze_grad/Shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451825,
+            "dur": 15,
+            "args": {
+                "name": "gradients/max_pooling1d/ExpandDims_grad/Shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451842,
+            "dur": 6,
+            "args": {
+                "name": "item_conv/kernel/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451849,
+            "dur": 6,
+            "args": {
+                "name": "item_conv/kernel/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451856,
+            "dur": 6,
+            "args": {
+                "name": "item_conv/bias/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451864,
+            "dur": 16,
+            "args": {
+                "name": "item_conv/bias/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451882,
+            "dur": 5,
+            "args": {
+                "name": "dense/kernel/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451888,
+            "dur": 6,
+            "args": {
+                "name": "dense/kernel/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451895,
+            "dur": 6,
+            "args": {
+                "name": "dense/bias/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451902,
+            "dur": 6,
+            "args": {
+                "name": "dense/bias/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451909,
+            "dur": 6,
+            "args": {
+                "name": "dense_1/kernel/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451917,
+            "dur": 5,
+            "args": {
+                "name": "dense_1/kernel/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451923,
+            "dur": 5,
+            "args": {
+                "name": "dense_1/bias/Adam",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451930,
+            "dur": 5,
+            "args": {
+                "name": "dense_1/bias/Adam_1",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451937,
+            "dur": 5,
+            "args": {
+                "name": "beta1_power",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451943,
+            "dur": 5,
+            "args": {
+                "name": "beta2_power",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451949,
+            "dur": 5,
+            "args": {
+                "name": "Adam/learning_rate",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451955,
+            "dur": 4,
+            "args": {
+                "name": "Adam/beta1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451961,
+            "dur": 5,
+            "args": {
+                "name": "Adam/beta2",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451967,
+            "dur": 5,
+            "args": {
+                "name": "Adam/epsilon",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451973,
+            "dur": 5,
+            "args": {
+                "name": "gradients/mean_squared_error/Mul_grad/Shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451979,
+            "dur": 4,
+            "args": {
+                "name": "gradients/Sum_grad/floordiv",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451984,
+            "dur": 4,
+            "args": {
+                "name": "user_conv/conv1d/ExpandDims/dim",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451990,
+            "dur": 7,
+            "args": {
+                "name": "user_conv/kernel",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907451999,
+            "dur": 6,
+            "args": {
+                "name": "user_conv/bias",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452006,
+            "dur": 5,
+            "args": {
+                "name": "flatten/Reshape/shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452012,
+            "dur": 5,
+            "args": {
+                "name": "dense/kernel",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452019,
+            "dur": 5,
+            "args": {
+                "name": "dense/bias",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452026,
+            "dur": 6,
+            "args": {
+                "name": "word_embeddings",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452033,
+            "dur": 6,
+            "args": {
+                "name": "item_conv/kernel",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452040,
+            "dur": 5,
+            "args": {
+                "name": "item_conv/bias",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452047,
+            "dur": 5,
+            "args": {
+                "name": "mean_squared_error/Const",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452053,
+            "dur": 5,
+            "args": {
+                "name": "mean_squared_error/ToFloat_3/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452059,
+            "dur": 4,
+            "args": {
+                "name": "mean_squared_error/zeros_like",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452065,
+            "dur": 4,
+            "args": {
+                "name": "ConstantFolding/mean_squared_error/div_recip",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452070,
+            "dur": 5,
+            "args": {
+                "name": "mean_squared_error/Greater",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452076,
+            "dur": 12,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-LayoutOptimizer",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452090,
+            "dur": 4,
+            "args": {
+                "name": "PermConstNHWCToNCHW-LayoutOptimizer",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452096,
+            "dur": 4,
+            "args": {
+                "name": "PermConstNCHWToNHWC-LayoutOptimizer",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452101,
+            "dur": 6,
+            "args": {
+                "name": "dense_1/kernel/read",
+                "op": "Identity",
+                "input0": "dense_1/kernel"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452109,
+            "dur": 4,
+            "args": {
+                "name": "word_embeddings/Adam/read",
+                "op": "Identity",
+                "input0": "word_embeddings/Adam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452115,
+            "dur": 5,
+            "args": {
+                "name": "dense_1/bias/read",
+                "op": "Identity",
+                "input0": "dense_1/bias"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452122,
+            "dur": 3,
+            "args": {
+                "name": "word_embeddings/Adam_1/read",
+                "op": "Identity",
+                "input0": "word_embeddings/Adam_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452127,
+            "dur": 4,
+            "args": {
+                "name": "beta1_power/read",
+                "op": "Identity",
+                "input0": "beta1_power"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452133,
+            "dur": 4,
+            "args": {
+                "name": "beta2_power/read",
+                "op": "Identity",
+                "input0": "beta2_power"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452301,
+            "dur": 6,
+            "args": {
+                "name": "user_conv/kernel/read",
+                "op": "Identity",
+                "input0": "user_conv/kernel"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452309,
+            "dur": 3,
+            "args": {
+                "name": "user_conv/bias/read",
+                "op": "Identity",
+                "input0": "user_conv/bias"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452314,
+            "dur": 3,
+            "args": {
+                "name": "dense/kernel/read",
+                "op": "Identity",
+                "input0": "dense/kernel"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452319,
+            "dur": 3,
+            "args": {
+                "name": "dense/bias/read",
+                "op": "Identity",
+                "input0": "dense/bias"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452324,
+            "dur": 3,
+            "args": {
+                "name": "word_embeddings/read",
+                "op": "Identity",
+                "input0": "word_embeddings"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452328,
+            "dur": 3,
+            "args": {
+                "name": "item_conv/kernel/read",
+                "op": "Identity",
+                "input0": "item_conv/kernel"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452333,
+            "dur": 3,
+            "args": {
+                "name": "item_conv/bias/read",
+                "op": "Identity",
+                "input0": "item_conv/bias"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452338,
+            "dur": 112,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_2",
+                "op": "Mul",
+                "input0": "word_embeddings/Adam/read",
+                "input1": "Adam/beta1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452465,
+            "dur": 30,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_5",
+                "op": "Mul",
+                "input0": "word_embeddings/Adam_1/read",
+                "input1": "Adam/beta2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452500,
+            "dur": 30,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub_1",
+                "op": "Sub",
+                "input0": "Adam/update_word_embeddings/sub/x",
+                "input1": "beta1_power/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452533,
+            "dur": 20,
+            "args": {
+                "name": "Adam/update_word_embeddings/sub",
+                "op": "Sub",
+                "input0": "Adam/update_word_embeddings/sub/x",
+                "input1": "beta2_power/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452555,
+            "dur": 8,
+            "args": {
+                "name": "user_conv/conv1d/ExpandDims_1",
+                "op": "ExpandDims",
+                "input0": "user_conv/kernel/read",
+                "input1": "gradients/concat/axis"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452565,
+            "dur": 5,
+            "args": {
+                "name": "item_conv/conv1d/ExpandDims_1",
+                "op": "ExpandDims",
+                "input0": "item_conv/kernel/read",
+                "input1": "gradients/concat/axis"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452572,
+            "dur": 70,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign",
+                "op": "Assign",
+                "input0": "word_embeddings/Adam",
+                "input1": "Adam/update_word_embeddings/mul_2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452645,
+            "dur": 45,
+            "args": {
+                "name": "Adam/update_word_embeddings/Assign_1",
+                "op": "Assign",
+                "input0": "word_embeddings/Adam_1",
+                "input1": "Adam/update_word_embeddings/mul_5"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452692,
+            "dur": 40,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt",
+                "op": "Sqrt",
+                "input0": "Adam/update_word_embeddings/sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452735,
+            "dur": 18,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul",
+                "op": "Mul",
+                "input0": "Adam/learning_rate",
+                "input1": "Adam/update_word_embeddings/Sqrt"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907452756,
+            "dur": 24,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv",
+                "op": "RealDiv",
+                "input0": "Adam/update_word_embeddings/mul",
+                "input1": "Adam/update_word_embeddings/sub_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907456396,
+            "dur": 7,
+            "args": {
+                "name": "gradients/embedding_lookup_grad/Reshape_1",
+                "op": "Reshape",
+                "input0": "hash_table_Lookup/_11",
+                "input1": "gradients/embedding_lookup_grad/ExpandDims"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907456295,
+            "id": 1
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907456396,
+            "id": 1
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907458120,
+            "dur": 6,
+            "args": {
+                "name": "gradients/embedding_lookup_1_grad/Reshape_1",
+                "op": "Reshape",
+                "input0": "hash_table_Lookup_1/_13",
+                "input1": "gradients/embedding_lookup_grad/ExpandDims"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup_1",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907458030,
+            "id": 2
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup_1",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907458120,
+            "id": 2
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907458130,
+            "dur": 184,
+            "args": {
+                "name": "gradients/concat_1",
+                "op": "ConcatV2",
+                "input0": "gradients/embedding_lookup_grad/Reshape_1",
+                "input1": "gradients/embedding_lookup_1_grad/Reshape_1",
+                "input2": "gradients/concat/axis"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Unique",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907458323,
+            "dur": 3608,
+            "args": {
+                "name": "Adam/update_word_embeddings/Unique",
+                "op": "Unique",
+                "input0": "gradients/concat_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907461962,
+            "dur": 7,
+            "args": {
+                "name": "Adam/update_word_embeddings/Shape",
+                "op": "Shape",
+                "input0": "Adam/update_word_embeddings/Unique"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "StridedSlice",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907461971,
+            "dur": 11,
+            "args": {
+                "name": "Adam/update_word_embeddings/strided_slice",
+                "op": "StridedSlice",
+                "input0": "Adam/update_word_embeddings/Shape",
+                "input1": "Adam/update_word_embeddings/strided_slice/stack",
+                "input2": "Adam/update_word_embeddings/strided_slice/stack_1",
+                "input3": "Adam/update_word_embeddings/strided_slice/stack_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Cast",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462317,
+            "dur": 51,
+            "args": {
+                "name": "mean_squared_error/ToFloat_1",
+                "op": "Cast",
+                "input0": "_arg_ratings_0_1/_5"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "_arg_ratings_0_1",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907452963,
+            "id": 3
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "_arg_ratings_0_1",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462317,
+            "id": 3
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462372,
+            "dur": 32,
+            "args": {
+                "name": "embedding_lookup",
+                "op": "Gather",
+                "input0": "word_embeddings/read",
+                "input1": "hash_table_Lookup/_7"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907456295,
+            "id": 4
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462372,
+            "id": 4
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462411,
+            "dur": 8,
+            "args": {
+                "name": "user_conv/conv1d/ExpandDims",
+                "op": "ExpandDims",
+                "input0": "embedding_lookup",
+                "input1": "user_conv/conv1d/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462422,
+            "dur": 39,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "user_conv/conv1d/ExpandDims",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462467,
+            "dur": 199,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D",
+                "op": "Conv2D",
+                "input0": "user_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "user_conv/conv1d/ExpandDims_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462674,
+            "dur": 47,
+            "args": {
+                "name": "user_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "user_conv/conv1d/Conv2D",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Squeeze",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462727,
+            "dur": 10,
+            "args": {
+                "name": "user_conv/conv1d/Squeeze",
+                "op": "Squeeze",
+                "input0": "user_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462739,
+            "dur": 28,
+            "args": {
+                "name": "user_conv/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "user_conv/conv1d/Squeeze",
+                "input1": "user_conv/bias/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462770,
+            "dur": 23,
+            "args": {
+                "name": "user_conv/Tanh",
+                "op": "Tanh",
+                "input0": "user_conv/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462796,
+            "dur": 5,
+            "args": {
+                "name": "max_pooling1d/ExpandDims",
+                "op": "ExpandDims",
+                "input0": "user_conv/Tanh",
+                "input1": "user_conv/conv1d/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462803,
+            "dur": 27,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "max_pooling1d/ExpandDims",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462836,
+            "dur": 49,
+            "args": {
+                "name": "max_pooling1d/MaxPool",
+                "op": "MaxPool",
+                "input0": "max_pooling1d/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462891,
+            "dur": 26,
+            "args": {
+                "name": "max_pooling1d/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "max_pooling1d/MaxPool",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Squeeze",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462923,
+            "dur": 7,
+            "args": {
+                "name": "max_pooling1d/Squeeze",
+                "op": "Squeeze",
+                "input0": "max_pooling1d/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462932,
+            "dur": 5,
+            "args": {
+                "name": "flatten/Reshape",
+                "op": "Reshape",
+                "input0": "max_pooling1d/Squeeze",
+                "input1": "flatten/Reshape/shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907462939,
+            "dur": 93,
+            "args": {
+                "name": "dense/MatMul",
+                "op": "MatMul",
+                "input0": "flatten/Reshape",
+                "input1": "dense/kernel/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463035,
+            "dur": 22,
+            "args": {
+                "name": "dense/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "dense/MatMul",
+                "input1": "dense/bias/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463060,
+            "dur": 24,
+            "args": {
+                "name": "dense/Relu",
+                "op": "Relu",
+                "input0": "dense/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Gather",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463087,
+            "dur": 24,
+            "args": {
+                "name": "embedding_lookup_1",
+                "op": "Gather",
+                "input0": "word_embeddings/read",
+                "input1": "hash_table_Lookup_1/_9"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup_1",
+            "pid": 9,
+            "tid": 0,
+            "ts": 1523836907458030,
+            "id": 5
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "hash_table_Lookup_1",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463087,
+            "id": 5
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463117,
+            "dur": 6,
+            "args": {
+                "name": "item_conv/conv1d/ExpandDims",
+                "op": "ExpandDims",
+                "input0": "embedding_lookup_1",
+                "input1": "user_conv/conv1d/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463125,
+            "dur": 26,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "item_conv/conv1d/ExpandDims",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463157,
+            "dur": 99,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D",
+                "op": "Conv2D",
+                "input0": "item_conv/conv1d/Conv2D-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "item_conv/conv1d/ExpandDims_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463294,
+            "dur": 37,
+            "args": {
+                "name": "item_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "item_conv/conv1d/Conv2D",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Squeeze",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463337,
+            "dur": 8,
+            "args": {
+                "name": "item_conv/conv1d/Squeeze",
+                "op": "Squeeze",
+                "input0": "item_conv/conv1d/Conv2D-0-0-TransposeNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463347,
+            "dur": 22,
+            "args": {
+                "name": "item_conv/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "item_conv/conv1d/Squeeze",
+                "input1": "item_conv/bias/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tanh",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463372,
+            "dur": 18,
+            "args": {
+                "name": "item_conv/Tanh",
+                "op": "Tanh",
+                "input0": "item_conv/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463393,
+            "dur": 5,
+            "args": {
+                "name": "max_pooling1d_1/ExpandDims",
+                "op": "ExpandDims",
+                "input0": "item_conv/Tanh",
+                "input1": "user_conv/conv1d/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463401,
+            "dur": 30,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "max_pooling1d_1/ExpandDims",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463437,
+            "dur": 38,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool",
+                "op": "MaxPool",
+                "input0": "max_pooling1d_1/MaxPool-0-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463480,
+            "dur": 27,
+            "args": {
+                "name": "max_pooling1d_1/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "max_pooling1d_1/MaxPool",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Squeeze",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463512,
+            "dur": 7,
+            "args": {
+                "name": "max_pooling1d_1/Squeeze",
+                "op": "Squeeze",
+                "input0": "max_pooling1d_1/MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463521,
+            "dur": 5,
+            "args": {
+                "name": "flatten_1/Reshape",
+                "op": "Reshape",
+                "input0": "max_pooling1d_1/Squeeze",
+                "input1": "flatten/Reshape/shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463528,
+            "dur": 60,
+            "args": {
+                "name": "dense_1/MatMul",
+                "op": "MatMul",
+                "input0": "flatten_1/Reshape",
+                "input1": "dense_1/kernel/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463592,
+            "dur": 21,
+            "args": {
+                "name": "dense_1/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "dense_1/MatMul",
+                "input1": "dense_1/bias/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463616,
+            "dur": 18,
+            "args": {
+                "name": "dense_1/Relu",
+                "op": "Relu",
+                "input0": "dense_1/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463636,
+            "dur": 25,
+            "args": {
+                "name": "Mul",
+                "op": "Mul",
+                "input0": "dense/Relu",
+                "input1": "dense_1/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463665,
+            "dur": 35,
+            "args": {
+                "name": "Sum",
+                "op": "Sum",
+                "input0": "Mul",
+                "input1": "user_conv/conv1d/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "SquaredDifference",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463704,
+            "dur": 27,
+            "args": {
+                "name": "mean_squared_error/SquaredDifference",
+                "op": "SquaredDifference",
+                "input0": "Sum",
+                "input1": "mean_squared_error/ToFloat_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463745,
+            "dur": 20,
+            "args": {
+                "name": "mean_squared_error/Mul",
+                "op": "Mul",
+                "input0": "mean_squared_error/SquaredDifference",
+                "input1": "mean_squared_error/ToFloat_3/x"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463769,
+            "dur": 37,
+            "args": {
+                "name": "mean_squared_error/Sum",
+                "op": "Sum",
+                "input0": "mean_squared_error/Mul",
+                "input1": "mean_squared_error/Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463811,
+            "dur": 19,
+            "args": {
+                "name": "mean_squared_error/div",
+                "op": "Mul",
+                "input0": "mean_squared_error/Sum",
+                "input1": "ConstantFolding/mean_squared_error/div_recip"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463833,
+            "dur": 6,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/mul",
+                "op": "Const",
+                "input0": "^mean_squared_error/Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463841,
+            "dur": 25,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/sub",
+                "op": "Sub",
+                "input0": "Sum",
+                "input1": "mean_squared_error/ToFloat_1",
+                "input2": "^mean_squared_error/Sum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Select",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463869,
+            "dur": 29,
+            "args": {
+                "name": "mean_squared_error/value",
+                "op": "Select",
+                "input0": "mean_squared_error/Greater",
+                "input1": "mean_squared_error/div",
+                "input2": "mean_squared_error/zeros_like"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463901,
+            "dur": 19,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/mul_1",
+                "op": "Mul",
+                "input0": "gradients/mean_squared_error/SquaredDifference_grad/mul",
+                "input1": "gradients/mean_squared_error/SquaredDifference_grad/sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907463994,
+            "dur": 6,
+            "args": {
+                "name": "gradients/mean_squared_error/SquaredDifference_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/mean_squared_error/SquaredDifference_grad/mul_1",
+                "input1": "gradients/mean_squared_error/Mul_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tile",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464004,
+            "dur": 63,
+            "args": {
+                "name": "gradients/Sum_grad/Tile",
+                "op": "Tile",
+                "input0": "gradients/mean_squared_error/SquaredDifference_grad/Reshape",
+                "input1": "gradients/Sum_grad/floordiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464071,
+            "dur": 28,
+            "args": {
+                "name": "gradients/Mul_grad/Mul",
+                "op": "Mul",
+                "input0": "gradients/Sum_grad/Tile",
+                "input1": "dense_1/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464111,
+            "dur": 40,
+            "args": {
+                "name": "gradients/Mul_grad/Mul_1",
+                "op": "Mul",
+                "input0": "gradients/Sum_grad/Tile",
+                "input1": "dense/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464155,
+            "dur": 25,
+            "args": {
+                "name": "gradients/dense/Relu_grad/ReluGrad",
+                "op": "ReluGrad",
+                "input0": "gradients/Mul_grad/Mul",
+                "input1": "dense/Relu",
+                "input2": "^gradients/Mul_grad/Mul_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464184,
+            "dur": 44,
+            "args": {
+                "name": "gradients/dense_1/Relu_grad/ReluGrad",
+                "op": "ReluGrad",
+                "input0": "gradients/Mul_grad/Mul_1",
+                "input1": "dense_1/Relu",
+                "input2": "^gradients/Mul_grad/Mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464233,
+            "dur": 58,
+            "args": {
+                "name": "gradients/dense/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/dense/Relu_grad/ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464294,
+            "dur": 29,
+            "args": {
+                "name": "gradients/dense_1/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/dense_1/Relu_grad/ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464326,
+            "dur": 55,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul",
+                "op": "MatMul",
+                "input0": "gradients/dense/Relu_grad/ReluGrad",
+                "input1": "dense/kernel/read",
+                "input2": "^gradients/dense/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464390,
+            "dur": 54,
+            "args": {
+                "name": "gradients/dense/MatMul_grad/MatMul_1",
+                "op": "MatMul",
+                "input0": "flatten/Reshape",
+                "input1": "gradients/dense/Relu_grad/ReluGrad",
+                "input2": "^gradients/dense/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464450,
+            "dur": 87,
+            "args": {
+                "name": "Adam/update_dense/bias/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "dense/bias",
+                "input1": "dense/bias/Adam",
+                "input2": "dense/bias/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/dense/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464543,
+            "dur": 48,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul",
+                "op": "MatMul",
+                "input0": "gradients/dense_1/Relu_grad/ReluGrad",
+                "input1": "dense_1/kernel/read",
+                "input2": "^gradients/dense_1/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464599,
+            "dur": 32,
+            "args": {
+                "name": "gradients/dense_1/MatMul_grad/MatMul_1",
+                "op": "MatMul",
+                "input0": "flatten_1/Reshape",
+                "input1": "gradients/dense_1/Relu_grad/ReluGrad",
+                "input2": "^gradients/dense_1/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464637,
+            "dur": 73,
+            "args": {
+                "name": "Adam/update_dense_1/bias/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "dense_1/bias",
+                "input1": "dense_1/bias/Adam",
+                "input2": "dense_1/bias/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/dense_1/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464839,
+            "dur": 8,
+            "args": {
+                "name": "gradients/max_pooling1d/Squeeze_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/dense/MatMul_grad/MatMul",
+                "input1": "gradients/max_pooling1d/Squeeze_grad/Shape",
+                "input2": "^gradients/dense/MatMul_grad/MatMul_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464850,
+            "dur": 50,
+            "args": {
+                "name": "Adam/update_dense/kernel/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "dense/kernel",
+                "input1": "dense/kernel/Adam",
+                "input2": "dense/kernel/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/dense/MatMul_grad/MatMul_1",
+                "input10": "^gradients/dense/MatMul_grad/MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464905,
+            "dur": 6,
+            "args": {
+                "name": "gradients/max_pooling1d_1/Squeeze_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/dense_1/MatMul_grad/MatMul",
+                "input1": "gradients/max_pooling1d/Squeeze_grad/Shape",
+                "input2": "^gradients/dense_1/MatMul_grad/MatMul_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464913,
+            "dur": 39,
+            "args": {
+                "name": "Adam/update_dense_1/kernel/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "dense_1/kernel",
+                "input1": "dense_1/kernel/Adam",
+                "input2": "dense_1/kernel/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/dense_1/MatMul_grad/MatMul_1",
+                "input10": "^gradients/dense_1/MatMul_grad/MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464957,
+            "dur": 29,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/max_pooling1d/Squeeze_grad/Reshape",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907464993,
+            "dur": 26,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/max_pooling1d_1/Squeeze_grad/Reshape",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465024,
+            "dur": 70,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad",
+                "input0": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "max_pooling1d/MaxPool",
+                "input2": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465100,
+            "dur": 39,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad",
+                "input0": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "max_pooling1d_1/MaxPool",
+                "input2": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465146,
+            "dur": 29,
+            "args": {
+                "name": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465181,
+            "dur": 34,
+            "args": {
+                "name": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465222,
+            "dur": 5,
+            "args": {
+                "name": "gradients/max_pooling1d/ExpandDims_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/max_pooling1d/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "input1": "gradients/max_pooling1d/ExpandDims_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465230,
+            "dur": 4,
+            "args": {
+                "name": "gradients/max_pooling1d_1/ExpandDims_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/max_pooling1d_1/MaxPool_grad/MaxPoolGrad-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "input1": "gradients/max_pooling1d/ExpandDims_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465237,
+            "dur": 27,
+            "args": {
+                "name": "gradients/user_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad",
+                "input0": "user_conv/Tanh",
+                "input1": "gradients/max_pooling1d/ExpandDims_grad/Reshape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "TanhGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465267,
+            "dur": 20,
+            "args": {
+                "name": "gradients/item_conv/Tanh_grad/TanhGrad",
+                "op": "TanhGrad",
+                "input0": "item_conv/Tanh",
+                "input1": "gradients/max_pooling1d_1/ExpandDims_grad/Reshape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465289,
+            "dur": 29,
+            "args": {
+                "name": "gradients/user_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/user_conv/Tanh_grad/TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465322,
+            "dur": 24,
+            "args": {
+                "name": "gradients/item_conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/item_conv/Tanh_grad/TanhGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465349,
+            "dur": 5,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Squeeze_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/user_conv/Tanh_grad/TanhGrad",
+                "input1": "gradients/user_conv/conv1d/Squeeze_grad/Shape",
+                "input2": "^gradients/user_conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465356,
+            "dur": 57,
+            "args": {
+                "name": "Adam/update_user_conv/bias/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "user_conv/bias",
+                "input1": "user_conv/bias/Adam",
+                "input2": "user_conv/bias/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/user_conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465418,
+            "dur": 5,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Squeeze_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/item_conv/Tanh_grad/TanhGrad",
+                "input1": "gradients/user_conv/conv1d/Squeeze_grad/Shape",
+                "input2": "^gradients/item_conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465426,
+            "dur": 40,
+            "args": {
+                "name": "Adam/update_item_conv/bias/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "item_conv/bias",
+                "input1": "item_conv/bias/Adam",
+                "input2": "item_conv/bias/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/item_conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465470,
+            "dur": 26,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/user_conv/conv1d/Squeeze_grad/Reshape",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465503,
+            "dur": 26,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/item_conv/conv1d/Squeeze_grad/Reshape",
+                "input1": "PermConstNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465534,
+            "dur": 138,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput",
+                "input0": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-LayoutOptimizer",
+                "input1": "user_conv/conv1d/ExpandDims_1",
+                "input2": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465681,
+            "dur": 135,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter",
+                "input0": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "gradients/user_conv/conv1d/Conv2D_grad/Const_1",
+                "input2": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465822,
+            "dur": 101,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput",
+                "input0": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-LayoutOptimizer",
+                "input1": "item_conv/conv1d/ExpandDims_1",
+                "input2": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907465932,
+            "dur": 102,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter",
+                "input0": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter-0-TransposeNHWCToNCHW-LayoutOptimizer",
+                "input1": "gradients/user_conv/conv1d/Conv2D_grad/Const_1",
+                "input2": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter-2-TransposeNHWCToNCHW-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466039,
+            "dur": 29,
+            "args": {
+                "name": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466074,
+            "dur": 6,
+            "args": {
+                "name": "gradients/user_conv/conv1d/ExpandDims_1_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "input1": "gradients/user_conv/conv1d/ExpandDims_1_grad/Shape",
+                "input2": "^gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Transpose",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466093,
+            "dur": 23,
+            "args": {
+                "name": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-1-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "op": "Transpose",
+                "input0": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput",
+                "input1": "PermConstNCHWToNHWC-LayoutOptimizer"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466121,
+            "dur": 6,
+            "args": {
+                "name": "gradients/item_conv/conv1d/ExpandDims_1_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter",
+                "input1": "gradients/user_conv/conv1d/ExpandDims_1_grad/Shape",
+                "input2": "^gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466130,
+            "dur": 4,
+            "args": {
+                "name": "gradients/embedding_lookup_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "input1": "gradients/embedding_lookup_grad/concat",
+                "input2": "^gradients/user_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466137,
+            "dur": 104,
+            "args": {
+                "name": "Adam/update_user_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "user_conv/kernel",
+                "input1": "user_conv/kernel/Adam",
+                "input2": "user_conv/kernel/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/user_conv/conv1d/ExpandDims_1_grad/Reshape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466246,
+            "dur": 6,
+            "args": {
+                "name": "gradients/embedding_lookup_1_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropInput-1-0-TransposeNCHWToNHWC-LayoutOptimizer",
+                "input1": "gradients/embedding_lookup_grad/concat",
+                "input2": "^gradients/item_conv/conv1d/Conv2D_grad/Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyAdam",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466255,
+            "dur": 59,
+            "args": {
+                "name": "Adam/update_item_conv/kernel/ApplyAdam",
+                "op": "ApplyAdam",
+                "input0": "item_conv/kernel",
+                "input1": "item_conv/kernel/Adam",
+                "input2": "item_conv/kernel/Adam_1",
+                "input3": "beta1_power/read",
+                "input4": "beta2_power/read",
+                "input5": "Adam/learning_rate",
+                "input6": "Adam/beta1",
+                "input7": "Adam/beta2",
+                "input8": "Adam/epsilon",
+                "input9": "gradients/item_conv/conv1d/ExpandDims_1_grad/Reshape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ConcatV2",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466319,
+            "dur": 48,
+            "args": {
+                "name": "gradients/concat",
+                "op": "ConcatV2",
+                "input0": "gradients/embedding_lookup_grad/Reshape",
+                "input1": "gradients/embedding_lookup_1_grad/Reshape",
+                "input2": "gradients/concat/axis"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "UnsortedSegmentSum",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466375,
+            "dur": 47,
+            "args": {
+                "name": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "op": "UnsortedSegmentSum",
+                "input0": "gradients/concat",
+                "input1": "Adam/update_word_embeddings/Unique/_15",
+                "input2": "Adam/update_word_embeddings/strided_slice"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466428,
+            "dur": 26,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_1",
+                "op": "Mul",
+                "input0": "Adam/update_word_embeddings/UnsortedSegmentSum",
+                "input1": "Adam/update_word_embeddings/sub_2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466460,
+            "dur": 25,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_3",
+                "op": "Mul",
+                "input0": "Adam/update_word_embeddings/sub_3",
+                "input1": "Adam/update_word_embeddings/UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466491,
+            "dur": 28,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd",
+                "op": "ScatterAdd",
+                "input0": "word_embeddings/Adam",
+                "input1": "Adam/update_word_embeddings/Unique/_17",
+                "input2": "Adam/update_word_embeddings/mul_1",
+                "input3": "^Adam/update_word_embeddings/Assign"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466522,
+            "dur": 22,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_4",
+                "op": "Mul",
+                "input0": "Adam/update_word_embeddings/mul_3",
+                "input1": "Adam/update_word_embeddings/UnsortedSegmentSum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466546,
+            "dur": 22,
+            "args": {
+                "name": "Adam/update_word_embeddings/mul_6",
+                "op": "Mul",
+                "input0": "Adam/update_word_embeddings/truediv",
+                "input1": "Adam/update_word_embeddings/ScatterAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ScatterAdd",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466575,
+            "dur": 37,
+            "args": {
+                "name": "Adam/update_word_embeddings/ScatterAdd_1",
+                "op": "ScatterAdd",
+                "input0": "word_embeddings/Adam_1",
+                "input1": "Adam/update_word_embeddings/Unique/_17",
+                "input2": "Adam/update_word_embeddings/mul_4",
+                "input3": "^Adam/update_word_embeddings/Assign_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sqrt",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466617,
+            "dur": 26,
+            "args": {
+                "name": "Adam/update_word_embeddings/Sqrt_1",
+                "op": "Sqrt",
+                "input0": "Adam/update_word_embeddings/ScatterAdd_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466650,
+            "dur": 27,
+            "args": {
+                "name": "Adam/update_word_embeddings/add",
+                "op": "Add",
+                "input0": "Adam/update_word_embeddings/Sqrt_1",
+                "input1": "Adam/epsilon"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466680,
+            "dur": 24,
+            "args": {
+                "name": "Adam/update_word_embeddings/truediv_1",
+                "op": "RealDiv",
+                "input0": "Adam/update_word_embeddings/mul_6",
+                "input1": "Adam/update_word_embeddings/add"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466707,
+            "dur": 24,
+            "args": {
+                "name": "Adam/update_word_embeddings/AssignSub",
+                "op": "AssignSub",
+                "input0": "word_embeddings",
+                "input1": "Adam/update_word_embeddings/truediv_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466734,
+            "dur": 21,
+            "args": {
+                "name": "Adam/mul",
+                "op": "Mul",
+                "input0": "beta1_power/read",
+                "input1": "Adam/beta1",
+                "input2": "^Adam/update_word_embeddings/AssignSub",
+                "input3": "^Adam/update_user_conv/kernel/ApplyAdam",
+                "input4": "^Adam/update_user_conv/bias/ApplyAdam",
+                "input5": "^Adam/update_item_conv/kernel/ApplyAdam",
+                "input6": "^Adam/update_item_conv/bias/ApplyAdam",
+                "input7": "^Adam/update_dense/kernel/ApplyAdam",
+                "input8": "^Adam/update_dense/bias/ApplyAdam",
+                "input9": "^Adam/update_dense_1/kernel/ApplyAdam",
+                "input10": "^Adam/update_dense_1/bias/ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466761,
+            "dur": 19,
+            "args": {
+                "name": "Adam/mul_1",
+                "op": "Mul",
+                "input0": "beta2_power/read",
+                "input1": "Adam/beta2",
+                "input2": "^Adam/update_word_embeddings/AssignSub",
+                "input3": "^Adam/update_user_conv/kernel/ApplyAdam",
+                "input4": "^Adam/update_user_conv/bias/ApplyAdam",
+                "input5": "^Adam/update_item_conv/kernel/ApplyAdam",
+                "input6": "^Adam/update_item_conv/bias/ApplyAdam",
+                "input7": "^Adam/update_dense/kernel/ApplyAdam",
+                "input8": "^Adam/update_dense/bias/ApplyAdam",
+                "input9": "^Adam/update_dense_1/kernel/ApplyAdam",
+                "input10": "^Adam/update_dense_1/bias/ApplyAdam"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466785,
+            "dur": 26,
+            "args": {
+                "name": "Adam/Assign",
+                "op": "Assign",
+                "input0": "beta1_power",
+                "input1": "Adam/mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Assign",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466813,
+            "dur": 22,
+            "args": {
+                "name": "Adam/Assign_1",
+                "op": "Assign",
+                "input0": "beta2_power",
+                "input1": "Adam/mul_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 13,
+            "tid": 0,
+            "ts": 1523836907466838,
+            "dur": 5,
+            "args": {
+                "name": "Adam",
+                "op": "NoOp",
+                "input0": "^Adam/Assign_1",
+                "input1": "^Adam/Assign"
+            }
+        }
+    ]
+}

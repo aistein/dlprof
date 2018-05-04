@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      <li>
+          <h3>Introduction</h3>
+          <p>
+          Historically deep neural networks were treated as interesting, but mostly theoretical, experiments due to the computational power needed to learn a model with so many parameters. Simpler models were proposed and tested, but nothing on the scale of what we have today. It is now common to find networks with orders of magnitude more trainable parameters than the size of the input space. Without the increase in computational power achieved by GPUs deep neural network research may have continued to lag. Now that GPUs and even some custom processing units (TPUs) have been optimized for highly concurrent computations how can we continue to make our deep neural networks faster?
+          </p>
+          <p>
+          This series of blog posts proposes ways to best utilize modern deep learning frameworks, specifically Tensorflow. It is the culmination of a final project for the course EE6040 at Columbia University by <a href="https://github.com/aistein"> <span class="username">aistein</span></a> and <a href="https://github.com/michaelAlvarino"> <span class="username">michaelAlvarino</span></a> exploring common inefficiencies, easy gains, new features, and low level analysis that can help improve neural network training and inference times. Our intent was to produce a guide-book detailing our experience using (and even compiling!) Tensorflow to build, debug, and improve neural networks.
+          </p>
+          <h3>Background</h3>
+          <p>
+          The research of optimizing GPU computations for linear algebra, and for creating efficient learning algorithms is very rich. Unfortunately, very little research has been published with the practical goal of using a specific framework like Tensorflow and its ecosystem of tools to improve neural network performance. We were able to find <a href="https://arxiv.org/pdf/1707.03750.pdf">some works</a> which utilize low level profiling tools to optimze high level framework code, but unfortunately the examples we found provided neither source code nor clear guidelines for how best to use the frameworks available. Rather, they provided small improvements that seemed unrealistic when considering professional development standards. The nearest examples are those provided in Tensorflows <a href="https://www.tensorflow.org/performance/performance_guide">performance</a> page. From this page we took several select examples that we thought were especially useful or attainable for engineers with our resources and tested them on some "real-world" use cases.
+          </p>
+          <h3>Our Approach</h3>
+          <p>
+          I quote real-world because we are not creating profit generating products or core business products, but rather taking networks that we are familiar with and applying the tools given to demonstrate improvements. As previously stated, our goals were to provide useful and achievable examples of optimizations and best practices for Tensorflow.
+          </p>
+          <h3>Experiments</h3>
+          <p>
+          One of the networks we use (specifically we use it to demonstrate input pipeline optimizations, the tfrecords api, and multi-gpu training) is based on the network described in <a href="https://arxiv.org/pdf/1701.04783.pdf">Joint Deep Modeling of Users and Items Using Reviews for Recommendation</a>. The original code base was part of a previous project written using a combination of keras for network modeling and python for input pipelines and is available <a href="https://github.com/michaelAlvarino/Deep-Learning">here</a>. The original convolutional model took on the order of 10s of minutes to train per epoch, but with our improvements we were able to bring that time down to 26 seconds in some cases.
+          </p>
+      </li>
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>

@@ -102,4 +102,12 @@ ENV/
 
 data
 logs
-*nohup*
+*nohup.out
+output/
+
+_site
+.sass-cache
+.jekyll-metadata
+Gemfile.lock
+tf_logs
+*.h5
