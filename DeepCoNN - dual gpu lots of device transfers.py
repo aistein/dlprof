@@ -33,40 +33,47 @@ def model_fn(features, labels, mode):
         "word_embeddings",
         shape=[len(dictionary), emb_size]
     )
+    with tf.device("/gpu:0"):
+        u_inputs = features[0]
+    with tf.device("/gpu:1"):
+        u_inputs = table.lookup(u_inputs)
+    with tf.device("/gpu:0"):
+        u_inputs = tf.nn.embedding_lookup(word_embeddings, u_inputs)
+    with tf.device("/gpu:1"):
+        user_conv1 = tf.layers.conv1d(
+            u_inputs,
+            filters,
+            kernel_size,
+            use_bias=True,
+            activation=tf.nn.tanh,
+            name="user_conv")
+    with tf.device("/gpu:0"):
+        user_max_pool1 = tf.layers.max_pooling1d(user_conv1, 2, 1)
+    with tf.device("/gpu:1"):
+        user_flat = tf.layers.flatten(user_max_pool1)
+    with tf.device("/gpu:0"):
+        user_dense = tf.layers.dense(user_flat, 64, activation=tf.nn.relu)
 
-    u_inputs = features[0]
-    i_inputs = features[1]
-
-    u_inputs = table.lookup(u_inputs)
-    i_inputs = table.lookup(i_inputs)
-
-    u_inputs = tf.nn.embedding_lookup(word_embeddings, u_inputs)
-    i_inputs = tf.nn.embedding_lookup(word_embeddings, i_inputs)
-
-    user_conv1 = tf.layers.conv1d(
-        u_inputs,
-        filters,
-        kernel_size,
-        use_bias=True,
-        activation=tf.nn.tanh,
-        name="user_conv")
-
-    item_conv1 = tf.layers.conv1d(
-        i_inputs,
-        filters,
-        kernel_size,
-        use_bias=True,
-        activation=tf.nn.tanh,
-        name="item_conv")
-
-    user_max_pool1 = tf.layers.max_pooling1d(user_conv1, 2, 1)
-    item_max_pool1 = tf.layers.max_pooling1d(item_conv1, 2, 1)
-
-    user_flat = tf.layers.flatten(user_max_pool1)
-    item_flat = tf.layers.flatten(item_max_pool1)
-
-    user_dense = tf.layers.dense(user_flat, 64, activation=tf.nn.relu)
-    item_dense = tf.layers.dense(item_flat, 64, activation=tf.nn.relu)
+    with tf.device("/gpu:1"):
+        i_inputs = features[1]
+    with tf.device("/gpu:0"):
+        i_inputs = table.lookup(i_inputs)
+    with tf.device("/gpu:1"):
+        i_inputs = tf.nn.embedding_lookup(word_embeddings, i_inputs)
+    with tf.device("/gpu:0"):
+        item_conv1 = tf.layers.conv1d(
+            i_inputs,
+            filters,
+            kernel_size,
+            use_bias=True,
+            activation=tf.nn.tanh,
+            name="item_conv")
+    with tf.device("/gpu:1"):
+        item_max_pool1 = tf.layers.max_pooling1d(item_conv1, 2, 1)
+    with tf.device("/gpu:0"):
+        item_flat = tf.layers.flatten(item_max_pool1)
+    with tf.device("/gpu:1"):
+        item_dense = tf.layers.dense(item_flat, 64, activation=tf.nn.relu)
 
     predictions = tf.reduce_sum( tf.multiply( user_dense, item_dense ), 1, keep_dims=True )
 
@@ -195,6 +202,7 @@ scoring_function = tf.estimator.Estimator(
 
 # from tensorflow.python import debug as tf_debug
 # hook = tf_debug.TensorBoardDebugHook("localhost:6060")
+
 times = []
 for i in range(5):
     s = time.time()
@@ -205,13 +213,13 @@ for i in range(5):
     times.append(runtime)
 print("average runtime: {}".format(np.mean(times)))
 
-# In[12]:
+# In[ ]:
 
 
 # scoring_function.evaluate(input_fn=test_input_fn)
 
 
-# In[13]:
+# In[ ]:
 
 
 # action_movie_lover = """i really love action movies they are my favorite kind of movie because i love to watch the good guys
@@ -226,7 +234,7 @@ print("average runtime: {}".format(np.mean(times)))
 # some other actors that don't need to be mentioned"""
 
 
-# In[14]:
+# In[ ]:
 
 
 # def get_predict_input_fn(user, item, trun_len):
@@ -239,14 +247,14 @@ print("average runtime: {}".format(np.mean(times)))
 #     return predict_input_fn
 
 
-# In[15]:
+# In[ ]:
 
 
 # prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_lover, item, truncate_len))
 # print(next(prediction))
 
 
-# In[16]:
+# In[ ]:
 
 
 # prediction = scoring_function.predict(input_fn=get_predict_input_fn(action_movie_hater, item, truncate_len))
