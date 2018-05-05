@@ -2,7 +2,7 @@
 excerpt: the uncertain and treacherous path of building tensorflow from scratch
 ---
 
-## Why Build from Scratch?
+## Tensorflow Compiler Optimizations
 The Tensorflow team's prime objective is to spread the use of its framework over as broad an audience as possible.  There are many classes of users who wish to take advantage of deep learning, from students to researchers to professional engineering teams.  It makes sense that by default Tensorflow has a standard set of configurations because not every use-case requires optimization.  However, the advanced users will be interested in fine-tuning the software to meet their needs.  Unfortunately, the instructions provided by Tensorflow towards this end are rather sparse.
 
 ## Overview
@@ -45,7 +45,7 @@ It is clear that having these instruction sets enabled in our Tensorflow build w
 
 Now you may be thinking "though these instructions can help with SIMD on the CPU, why should we even bother? Afterall, isn't SIMD exactly what GPGPU is for?!"  That is a very good question without a straightforward answer, and its discussion is certainly beyond the scope of this post.  For a thorough understanding of the complexities of this question, check out this (somewhat outdated) white-paper by Intel, ["Debunking the 100x GPU vs. CPU Myth"](http://sbel.wisc.edu/Courses/ME964/Literature/LeeDebunkGPU2010.pdf).
 
-## Optimization 1: Compiling with Intel MKL Libraries
+### Optimization 1: Compiling with Intel MKL Libraries
 In order to enable Tensorflow to use SSE4, AVX, and FMA instructions, we must compile it from the source code with the special siwtch ```--config=mkl```.  However, installing all the dependencies necessary to do this and considering the different situations across operating systems is a pain.  Therefore, we do the build in the safe confines of a Docker container, and then use the generated .whl file on our local system.  Before you begin, please [install and configure Docker](https://www.pugetsystems.com/labs/hpc/How-To-Setup-NVIDIA-Docker-and-NGC-Registry-on-your-Workstation---Part-1-Introduction-and-Base-System-Setup-1095/). These instructions are copied from Dr. Kinghorn's post mentioned above, reformatted here for convenience.
 
 1. Make a directory to do your build
@@ -118,6 +118,7 @@ $ docker run --rm -it -v $PROJECT/TF-build:/root/TF-build tf-build-1.7-cpu-mkl-o
     - ```-i``` keep stdin open so that the container may receive our input
     - ```-t``` allocates a pseudo-TTY (text-only console)
     - ```-v``` mount the *volume* (folder containing tensorflow source-code) at a specific point inside the container
+
   Interesting stuff! Anyway, back to the setup we go.
 
 7. Configure Tensorflow. You should now be greeted with a custom CLI prompt, which indicates that we are running inside the container.
@@ -155,4 +156,39 @@ Here is the output we got:
  took 7.407203197479248 seconds
 ```
 
-Interesting! While the warning about SSE4, AVX, and FMA capabilities has disappeared, we certainly did not achieve any speedup over the naive installation.  What has happened?  This is where using the Nvidia profiler may come in handy.
+Interesting! While the warning about SSE4, AVX, and FMA capabilities has disappeared, we certainly did not achieve any speedup over the naive installation.  What has happened?  Upon deploying the native python profiler, via ```python -m cProfile -s cumtime mm_test.py &> profile.txt``` we found the profiles very hard to interpret.  As such, we decided to use the native tensorflow chrome-trace to get more insight:
+```python
+import tensorflow as tf
+import time
+from tensorflow.python.client import timeline
+
+tf.set_random_seed(42)
+A = tf.random_normal([10000,10000])
+B = tf.random_normal([10000,10000])
+def checkMM():
+        start_time = time.time()
+        with tf.Session() as sess:
+                # options to trace execution
+                options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+                run_metadata = tf.RunMetadata()
+
+                print( sess.run( tf.reduce_sum( tf.matmul(A,B) ),\
+                                 options=options,\
+                                 run_metadata=run_metadata ) )
+
+                # create timeline object and write to json
+                fetched_timeline = timeline.Timeline(run_metadata.step_stats)
+                chrome_trace = fetched_timeline.generate_chrome_trace_format()
+                with open('timeline.json', 'w') as f:
+                        f.write(chrome_trace)
+
+        print(" took {} seconds".format(time.time() - start_time))
+checkMM()
+```
+In your Google Chrome browser, you can view the output file ```timeline.json``` by navigating to ```chrome://tracing``` and then loading the json file.  This made it abundantly clear: the compiler optimization did not help with matrix multiplication at all!
+
+Base-Trace:
+![base trace]({{ "/dlprof/assets/base-trace.png" }})
+
+MKL-Trace:
+![mkl trace]({{ "/dlprof/assets/mkl-trace.png" }})
