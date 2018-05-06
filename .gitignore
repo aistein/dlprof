@@ -116,5 +116,6 @@ tf_logs
 # intel_mkl
 intel_mkl/*.sh
 intel_mkl/cifar10
-intel_mkl/TF-build*
+intel_mkl/TF-build*/tensorflow
+intel_mkl/TF-build*/tensorflow_pkg
 intel_mkl/nvidia_cloud_registry_gpg_key.key
