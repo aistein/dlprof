@@ -36,8 +36,7 @@ $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" 
 ```
 5. Create the Dockerfile. Save the following as "Dockerfile", with a capital D!
 
-```bash
-    
+    ```bash
     # Dockerfile to setup a build environment for TensorFlow
     # using Intel MKL and Anaconda3 Python
     
@@ -74,8 +73,8 @@ $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" 
     
     # That's it! That should be enough to do a TensorFlow 1.7 CPU build
     # using Anaconda Python 3.6 Intel MKL with gcc 5.4
-    
     ```
+    
 6. Create the Docker container and run it. Note you will have to set the environmental variable PROJECT yourself to the proper path to your working directory. **Note:** you must always be in the *dockerfile* directory to use the local configurations file.
 ```bash
 $ docker build -t tf-build-1.7-cpu-mkl-only .
