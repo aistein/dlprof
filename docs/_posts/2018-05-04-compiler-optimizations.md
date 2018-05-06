@@ -35,7 +35,6 @@ $ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" > bazel.list
 ```
 5. Create the Dockerfile. Save the following as "Dockerfile", with a capital D!
-
 ```bash
 
 # Dockerfile to setup a build environment for TensorFlow
@@ -86,8 +85,7 @@ $ docker run --rm -it -v $PROJECT/TF-build:/root/TF-build tf-build-1.7-cpu-mkl-o
     - ```-i``` keep stdin open so that the container may receive our input
     - ```-t``` allocates a pseudo-TTY (text-only console)
     - ```-v``` mount the *volume* (folder containing tensorflow source-code) at a specific point inside the container
-
-  Interesting stuff! Anyway, back to the setup we go.
+Interesting stuff! Anyway, back to the setup we go.
 
 7. Configure Tensorflow. You should now be greeted with a custom CLI prompt, which indicates that we are running inside the container.
 ```bash
