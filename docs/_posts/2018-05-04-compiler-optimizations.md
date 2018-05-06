@@ -85,15 +85,12 @@ $ docker run --rm -it -v $PROJECT/TF-build:/root/TF-build tf-build-1.7-cpu-mkl-o
     - ```-i``` keep stdin open so that the container may receive our input
     - ```-t``` allocates a pseudo-TTY (text-only console)
     - ```-v``` mount the *volume* (folder containing tensorflow source-code) at a specific point inside the container
-Interesting stuff! Anyway, back to the setup we go.
-
 7. Configure Tensorflow. You should now be greeted with a custom CLI prompt, which indicates that we are running inside the container.
 ```bash
 > cd root/TF-build/tensorflow
 > ./configure
 ```
   - Say yes to "jemalloc support", and no to every other prompt (including CUDA support, as we are not yet demonstrating GPU).
-
 8. Build Tensorflow. **Warning:** This can take quite some time, on the order of 30 minutes in the case of our GCP instance.
 ```bash
 > bazel build --config=opt --config=mkl //tensorflow/tools/pip_package:build_pip_package
