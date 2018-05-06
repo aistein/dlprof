@@ -30,6 +30,7 @@ import argparse
 import sys
 import tempfile
 import time
+from pathlib import Path
 
 import numpy as np
 
@@ -191,25 +192,33 @@ def main(_):
   graph_location = tempfile.mkdtemp()
   print('Saving graph to: %s' % graph_location)
   train_writer = tf.summary.FileWriter(graph_location)
-  train_writer.add_graph(tf.get_default_graph())
+  g = tf.get_default_graph()
+  train_writer.add_graph(g)
 
-  with tf.Session() as sess:
-    sess.run(tf.global_variables_initializer())
-    time_per_epoch = []
-    for i in range(20000):
-      batch = mnist.train.next_batch(50)
-      # if i % 100 == 0:
-      #   train_accuracy = accuracy.eval(feed_dict={
-      #       x: batch[0], y_: batch[1], keep_prob: 1.0})
-      #   print('step %d, training accuracy %g' % (i, train_accuracy))
-      start = time.time()
-      train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-      end = time.time()
-      time_per_epoch.append(end - start)
+  if FLAGS.data_format == 'NHWC':
+    profile_dir = './profiles_NHWC'
+  else:
+    profile_dir = './profiles_NCHW'
 
-    print('average time per epoch {}'.format(np.mean(time_per_epoch)))
-    print('test accuracy %g' % accuracy.eval(feed_dict={
-        x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
+  if not Path(profile_dir).exists():
+      Path(profile_dir).mkdir()
+
+  with tf.contrib.tfprof.ProfileContext(profile_dir) as pctx:
+    with tf.Session() as sess:
+      sess.run(tf.global_variables_initializer())
+      # profiler = tf.profiler.Profiler(sess.graph)
+      # time_per_epoch = []
+      for i in range(2000):
+        batch = mnist.train.next_batch(50)
+        if i % 100 == 0:
+          # opts = option_builder.ProfileOptionBuilder.time_and_memory()
+          # profiler.profile_operations(options=opts)
+          train_accuracy = accuracy.eval(feed_dict={
+              x: batch[0], y_: batch[1], keep_prob: 1.0})
+          print('step %d, training accuracy %g' % (i, train_accuracy))
+        train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+      print('test accuracy %g' % accuracy.eval(feed_dict={
+          x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
