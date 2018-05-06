@@ -69,7 +69,7 @@ $ cd dockerfile
 $ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" > bazel.list
 ```
-5. Create the Dockerfile and build the container. Save the following as \"Dockerfile\", with a capital 'D'!
+5. Create the Dockerfile and build the container. Save the following as `Dockerfile`.
 ```bash
 # Dockerfile to setup a build environment for TensorFlow
 # using Intel MKL and Anaconda3 Python
