@@ -197,15 +197,15 @@ def main(_):
     sess.run(tf.global_variables_initializer())
     time_per_epoch = []
     for i in range(20000):
-      start = time.time()
       batch = mnist.train.next_batch(50)
-      end = time.time()
-      time_per_epoch.append(end - start)
       # if i % 100 == 0:
       #   train_accuracy = accuracy.eval(feed_dict={
       #       x: batch[0], y_: batch[1], keep_prob: 1.0})
       #   print('step %d, training accuracy %g' % (i, train_accuracy))
+      start = time.time()
       train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+      end = time.time()
+      time_per_epoch.append(end - start)
 
     print('average time per epoch {}'.format(np.mean(time_per_epoch)))
     print('test accuracy %g' % accuracy.eval(feed_dict={
