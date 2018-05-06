@@ -34,7 +34,7 @@ $ cd dockerfile
 $ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" > bazel.list
 ```
-5. Create the Dockerfile. Save the following as "Dockerfile", with a capital 'D'!
+5. Create the Dockerfile. Save the following as "Dockerfile", with a capital D!
 ```bash
 # Dockerfile to setup a build environment for TensorFlow
 # using Intel MKL and Anaconda3 Python
@@ -42,7 +42,7 @@ $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" 
 FROM ubuntu:16.04
 
 # Add a few needed packages to the base Ubuntu 16.04
-# Dr. Kinghorn prefers 'emacs-nox', We prefer 'vim-nox'
+# Dr. Kinghorn prefers emacs-nox, We prefer vim-nox
 RUN \
     apt-get update && apt-get install -y \
     build-essential \
