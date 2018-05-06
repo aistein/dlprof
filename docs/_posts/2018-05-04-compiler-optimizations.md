@@ -40,7 +40,7 @@ produces the following results:
 A more in depth performance comparison is the subject of a later section in this post, but let us briefly inspect the output.  The given information states that we have certain capabilities on our CPU which are not being utilized by our Tensorflow build: SSE4.1 SSE4.2 AVX AVX2 FMA.  What are they?
 - **SSE4 Instructions:** "Streaming SIMD Extensions 4". These are assembly instructions for Intel and AMD processors which allow for "packed" read/writes, string comparisons, and integer operations.
 - **AVX Instructions:** "Adanced Vector Extensions" allow Intel and AMD processors to do mathematical operations and memory manipulations on up to 256 bits of input data at a time.
-- **FMA Instrucions:** "Fused-Multiply Accumulate" instructuions are exactly as the name implies: In a single basic computational step, Intel and AMD processors with these extensions can - for example - take 3 inputs a,b,c and produce a = a*c + b.
+- **FMA Instrucions:** "Fused-Multiply Accumulate" instructuions are exactly as the name implies: In a single basic computational step, Intel and AMD processors with these extensions can - for example - take 3 inputs a,b,c and produce a = a\*c + b.
 It is clear that having these instruction sets enabled in our Tensorflow build would improve the performance of any program that could benefit from SIMD (single-instruction multiple-data), and matrix multiplication is exactly one such application!
 
 Now you may be thinking "though these instructions can help with SIMD on the CPU, why should we even bother? Afterall, isn't SIMD exactly what GPGPU is for?!"  That is a very good question without a straightforward answer, and its discussion is certainly beyond the scope of this post.  For a thorough understanding of the complexities of this question, check out this (somewhat outdated) white-paper by Intel, ["Debunking the 100x GPU vs. CPU Myth"](http://sbel.wisc.edu/Courses/ME964/Literature/LeeDebunkGPU2010.pdf).
@@ -69,7 +69,7 @@ $ cd dockerfile
 $ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" > bazel.list
 ```
-5. Create the Dockerfile and build the container. Save the following as "Dockerfile", with a capital 'D'!
+5. Create the Dockerfile and build the container. Save the following as \"Dockerfile\", with a capital 'D'!
 ```bash
 # Dockerfile to setup a build environment for TensorFlow
 # using Intel MKL and Anaconda3 Python
