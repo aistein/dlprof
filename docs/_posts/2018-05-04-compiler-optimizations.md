@@ -126,7 +126,7 @@ $ docker run --rm -it -v $PROJECT/TF-build:/root/TF-build tf-build-1.7-cpu-mkl-o
 > cd root/TF-build/tensorflow
 > ./configure
 ```
-  - Say yes to "jemalloc support", and just hit enter on literally every other prompt (including CUDA support, as we are not yet demonstrating GPU).
+  - Say yes to "jemalloc support", and no to every other prompt (including CUDA support, as we are not yet demonstrating GPU).
 
 8. Build Tensorflow. **Warning:** This can take quite some time, on the order of 30 minutes in the case of our GCP instance.
 ```bash
