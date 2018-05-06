@@ -183,7 +183,7 @@ def checkMM():
         print(" took {} seconds".format(time.time() - start_time))
 checkMM()
 ```
-In your Google Chrome browser, you can view the output file ```timeline.json``` by navigating to ```chrome://tracing``` and then loading the json file.  This made it abundantly clear: the compiler optimization did not help with matrix multiplication at all!
+In your Google Chrome browser, you can view the output file ```timeline.json``` by navigating to ```chrome://tracing``` and then loading the json file.
 
 Base-Trace:
 ![base trace]({{ "/dlprof/assets/base-trace.png" }})
