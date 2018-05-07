@@ -3,6 +3,12 @@ excerpt: fusion of linear algebra operations on the GPU for massive speedup
 ---
 
 ## Accelerated Linea Algebra JIT Compiler Optimization
+
+---
+*Difficulty: Advanced*
+
+---
+
 The XLA compiler available for tensorflow must be custom-built from source, and is only compatible with Nvidia devices with compute capability 5.2 or greater (P100 or better!).  Though extremely difficult to get working, it is well worth the trouble, as these traces below demonstrate:
 
 **No XLA on the System:**
