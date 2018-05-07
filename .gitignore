@@ -119,3 +119,7 @@ intel_mkl/cifar10
 intel_mkl/TF-build*/tensorflow
 intel_mkl/TF-build*/tensorflow_pkg
 intel_mkl/nvidia_cloud_registry_gpg_key.key
+
+# XLA
+mnist/xla/TF-build*/tensorflow
+mnist_xla/TF-build*/tensorflow_pkg

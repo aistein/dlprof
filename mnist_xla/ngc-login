@@ -1,0 +1,2 @@
+sudo docker login -u '$oauthtoken' --password-stdin nvcr.io <<< 'amNoNHZhMjdrdGVwY21xZjFuYjVxZnF2MmI6ODJlN2MzYTktZjZkMy00N2ZjLWFjMDAtNGFkMWU0MjgwNWUy'
+

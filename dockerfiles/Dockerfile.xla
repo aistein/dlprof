@@ -1,0 +1,36 @@
+# Dockerfile to setup a build environment for TensorFlow
+# using Intel MKL and Anaconda3 Python
+
+FROM nvcr.io/nvidia/tensorflow:18.04-py3
+
+# Add a few needed packages to the base Ubuntu 16.04
+# OK, maybe *you* don't need emacs :-)
+RUN \
+    apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    emacs-nox \
+    git \
+    openjdk-8-jdk \
+    && rm -rf /var/lib/lists/*
+
+# Add the repo for bazel and install it.
+# I just put it in a file bazel.list and coped in the file
+# containing the following line
+# deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8
+COPY bazel.list /etc/apt/sources.list.d/
+RUN \
+  curl https://bazel.build/bazel-release.pub.gpg | apt-key add - && \
+  apt-get update && apt-get install -y bazel
+
+# Copy in and install Anaconda3 from the shell archive
+# Anaconda3-5.1.0-Linux-x86_64.sh
+COPY Anaconda3* /root/
+RUN \
+  cd /root; chmod 755 Anaconda3*.sh && \
+  ./Anaconda3*.sh -b && \
+  echo 'export PATH="$HOME/anaconda3/bin:$PATH"' >> .bashrc && \
+  rm -f Anaconda3*.sh
+
+# That's it! That should be enough to do a TensorFlow 1.7 CPU build
+# using Anaconda Python 3.6 Intel MKL with gcc 5.4
