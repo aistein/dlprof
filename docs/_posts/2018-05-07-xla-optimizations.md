@@ -14,10 +14,10 @@ The XLA compiler available for tensorflow must be custom-built from source, and 
 **No XLA on the System:**
 ![base trace]({{ "/dlprof/assets/timeline_no_system_xla.png" }})
 
-**XLA on system but diabled:**
+**XLA on System but Disabled:**
 ![mkl trace]({{ "/dlprof/assets/timeline_system_xla_diabled.png" }})
 
-**XLA on system enabled:**
+**XLA on System Enabled:**
 ![mkl trace]({{ "/dlprof/assets/timeline_sytem_xla_enabled.png" }})
 
 ### Background

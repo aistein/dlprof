@@ -3,6 +3,11 @@ excerpt: the uncertain and treacherous path of building tensorflow from scratch
 ---
 
 ## Tensorflow Compiler Optimizations
+
+---
+*Difficulty: Intermediate*
+
+---
 The Tensorflow team's prime objective is to spread the use of its framework over as broad an audience as possible.  There are many classes of users who wish to take advantage of deep learning, from students to researchers to professional engineering teams.  It makes sense that by default Tensorflow has a standard set of configurations because not every use-case requires optimization.  However, the advanced users will be interested in fine-tuning the software to meet their needs.  Unfortunately, the instructions provided by Tensorflow towards this end are rather sparse.
 
 ## Overview
