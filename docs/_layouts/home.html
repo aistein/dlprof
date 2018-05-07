@@ -32,6 +32,9 @@ layout: default
           <p>
           One of the networks we use (specifically we use it to demonstrate input pipeline optimizations, the tfrecords api, and multi-gpu training) is based on the network described in <a href="https://arxiv.org/pdf/1701.04783.pdf">Joint Deep Modeling of Users and Items Using Reviews for Recommendation</a>. The original code base was part of a previous project written using a combination of keras for network modeling and python for input pipelines and is available <a href="https://github.com/michaelAlvarino/Deep-Learning">here</a>. The original convolutional model took on the order of 10s of minutes to train per epoch, but with our improvements we were able to bring that time down to 26 seconds in some cases.
           </p>
+          <p>
+          In addition to this custom model, we use some pre-defined Tensorflow models often pulled and modified from the Tensorflow Examples repository. For example, when demonstrating the effect of data formats we turned to Tensorflow's mnist_deep.py example for a pre-existing convolutional network that could be optimized.
+          </p>
       </li>
       {%- for post in site.posts -%}
       <li>
