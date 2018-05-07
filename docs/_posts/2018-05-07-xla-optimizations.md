@@ -68,9 +68,8 @@ $ cd dockerfile
 ```bash
 $ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" > bazel.list
-
 ```
-5. Create the Dockerfile. Save the following as "Dockerfile", with a capital D!
+7. Create the Dockerfile. Save the following as "Dockerfile", with a capital D!
     ```bash
     # Dockerfile to setup a build environment for TensorFlow
     # using Intel MKL and Anaconda3 Python
@@ -110,12 +109,12 @@ $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" 
     # That's it! That should be enough to do a TensorFlow 1.7 CPU build
     # using Anaconda Python 3.6 Intel MKL with gcc 5.4
     ```
-6. Build the modified ```nvidia/tensorflow``` container and run it. **Note** make sure ```$REPO``` is set to your TF-build directory.
+8. Build the modified ```nvidia/tensorflow``` container and run it. **Note:** make sure ```$REPO``` is set to your TF-build directory.
 ```bash
 $ docker build -t tf-build-1.8-gpu-mkl-xla .
 $ docker run --runtime=nvidia --rm -it -v $REPO:/root/TF-build tf-build-1.8-gpu-mkl-xla
 ```
-7. Configure Tensorflow. You should now be greeted with a custom CLI prompt, which indicates that we are running inside the container.
+9. Configure Tensorflow. You should now be greeted with a custom CLI prompt, which indicates that we are running inside the container.
 ```bash
 > cd root/TF-build/tensorflow
 ```
@@ -127,21 +126,21 @@ $ docker run --runtime=nvidia --rm -it -v $REPO:/root/TF-build tf-build-1.8-gpu-
 > python configure.py
 ```
   - Say yes to "jemalloc support", and no to every other prompt (including CUDA support, as we are not yet demonstrating GPU).
-8. Build Tensorflow. **Warning:** This can take quite some time, on the order of 5-6 HOURS in the case of our GCP instance. Compute time with the P100 is expensive, so proceed at your own risk!
+10. Build Tensorflow. **Warning:** This can take quite some time, on the order of 5-6 HOURS in the case of our GCP instance. Compute time with the P100 is expensive, so proceed at your own risk!
 ```bash
 > bazel build //tensorflow/tools/pip_package:build_pip_package
 ```
-9. Create the pip package
+11. Create the pip package
 ```bash
 > bazel-bin/tensorflow/tools/pip_package/build_pip_package ../tensorflow_pkg
 ```
-10. Create a new conda environment and install the custom Tensorflow build
+12. Create a new conda environment and install the custom Tensorflow build
 ```bash
 > conda create -n tftest
 > source activate tftest
 > cd ../ && pip install tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl
 ```
-11. Test that your XLA is working by running the mnist example and examining the generated ```timeline.ctf.json``` file via ```chrome://tracing```. (From [this](https://www.tensorflow.org/performance/xla/jit) Tensorflow XLA tutorial)
+13. Test that your XLA is working by running the mnist example and examining the generated ```timeline.ctf.json``` file via ```chrome://tracing```. (From [this](https://www.tensorflow.org/performance/xla/jit) Tensorflow XLA tutorial)
 ```bash
 > TF_XLA_FLAGS=--xla_generate_hlo_graph=.* python mnist_softmax_xla.py
 ```
